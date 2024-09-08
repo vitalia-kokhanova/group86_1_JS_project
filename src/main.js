@@ -3,6 +3,7 @@ import { firebaseConfig } from "./firebase";
 const app = initializeApp(firebaseConfig);
 
 // Пример для начала
+/*
 import renderAbout from "./src/renderAbout";
 import renderHome from "./src/renderHome";
 import renderContacts from "./src/renderContacts";
@@ -24,3 +25,4 @@ document.addEventListener("DOMContentLoaded", () => {
 			renderProducts(appContainer);
 	}
 });
+*/
