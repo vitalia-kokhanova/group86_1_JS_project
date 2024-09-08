@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "default": "project-js-9e6d9"
+  },
+  "targets": {
+    "project-js-9e6d9": {
+      "hosting": {
+        "project-js-9e6d9-e9bed": [
+          "1:12456906342:web:99533e85fc9948d2a727a7"
+        ],
+        "project-js-9e6d9": [
+          "project-js-9e6d9"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
