@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "./firebase";
-const app = initializeApp(firebaseConfig);
+import { firebaseConfig } from "./firebase.js";
+initializeApp(firebaseConfig);
 
 // Пример для начала
 /*
