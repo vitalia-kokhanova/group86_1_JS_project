@@ -1,1 +1,6 @@
+@import "vars";
 
+main {
+	background-color: $background-color;
+	font-family: $main-font;
+}

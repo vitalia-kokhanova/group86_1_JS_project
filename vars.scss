@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+.montserrat-font {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+*/
+
+// Fonts
+
+$main-font: "Montserrat", sans-serif;
+
+// Colors
+
+$background-color: #fff0e4;
+$first-screen-flowers-back-color: #fff8f5;
+$btn-general-color: #d7537a;
+$btn-hover-color: #fd4f79;
+$btn-active-color: #fb7e98;
+$slider-dash-non-active-color: #dd9eab;
+$slider-dash-active-color: #d7537a;
+
+$logo-upper-text-color: #073c2a;
+$logo-lower-text-color: #0a3f23;
+$black-text-color: #272626;
+$white-text-color: #ffffff;
+$crossed-out-price-text-color: #8e8d6f;
+$price-and-sale-text-color: #7ea048;
+
+$card-background-color: #ffffff;
+$hit-badge-color: #fd4f79;
+$new-badge-color: #4ae950;
+$bouquet-of-the-day-badge-color: #fd984f;
+$sale-badge-color: #f1eb4c;
+
+$nav-icons-color: #eb8671;
+$contacts-icons-color: #eb8671;
+
+// placeholders в формах, светлозеленые блёклые слова (не только кроссд-аут прайс), цвета иконок, номера телефона с разных режимах; шрифты остальные; размеры шрифтов; font-style. радиокнопки?
