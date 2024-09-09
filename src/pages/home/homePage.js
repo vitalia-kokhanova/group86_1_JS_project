@@ -1,6 +1,6 @@
 import "./homePage.scss";
-import { appContainer } from "../vars";
-import { renderHeader } from "../common/header.js";
+import { appContainer } from "../../vars.js";
+import { renderHeader } from "../../common/header.js";
 
 export function renderHome(element) {
 	element.innerHTML = "";
