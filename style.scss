@@ -1,6 +1,20 @@
 @import "vars";
+@import "fonts";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $main-font-family;
+	font-style: normal;
+	font-weight: 400;
+	color: $black-text-color;
+}
 
 main {
-	background-color: $background-color;
-	font-family: $main-font;
+	background-color: $main-background-color;
+	font-family: $main-font-family;
 }
