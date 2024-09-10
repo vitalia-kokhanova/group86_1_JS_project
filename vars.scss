@@ -1,42 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "fonts";
 
-/*
-.montserrat-font {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: <weight>;
-	font-style: normal;
-}
-*/
+// Шрифты
 
-// Fonts
+$main-font-family: "Montserrat", sans-serif;
+$lato-font-family: "Lato", sans-serif;
+$sourcesanspro-font-family: "Source Sans Pro", sans-serif;
+$logo-big-text-font-family: "Gadugi-Bold", sans-serif;
+$logo-small-text-font-family: "Candara", sans-serif;
 
-$main-font: "Montserrat", sans-serif;
+// Цвета
 
-// Colors
+// Цвета фона
 
-$background-color: #fff0e4;
-$first-screen-flowers-back-color: #fff8f5;
+/* Это основной бежевый цвет */
+$main-background-color: #fff0e4;
+
+/* (Этот белый цвет используется на первом экране сзади больших цветов, а так же в полях форм и на главной странице внизу.)*/
+$white-background-color: #fff8f5;
+$form-input-fields-back-color: #fff8f5;
+
+// Цвета кнопок, слайдеров, надписей в розовом цвете
 $btn-general-color: #d7537a;
 $btn-hover-color: #fd4f79;
-$btn-active-color: #fb7e98;
-$slider-dash-non-active-color: #dd9eab;
-$slider-dash-active-color: #d7537a;
+$btn-active-click-color: #fb7e98;
+$slider-dash-off-color: #dd9eab;
+$slider-dash-on-color: #d7537a;
 
+// Цвета текста
 $logo-upper-text-color: #073c2a;
 $logo-lower-text-color: #0a3f23;
 $black-text-color: #272626;
 $white-text-color: #ffffff;
 $crossed-out-price-text-color: #8e8d6f;
+$menu-items-off-text-color: #8e8d6f;
 $price-and-sale-text-color: #7ea048;
+$input-placeholder-text-color: #00000054;
 
+// Цвета для карточки товара и бейджиков
 $card-background-color: #ffffff;
 $hit-badge-color: #fd4f79;
 $new-badge-color: #4ae950;
 $bouquet-of-the-day-badge-color: #fd984f;
 $sale-badge-color: #f1eb4c;
 
-$nav-icons-color: #eb8671;
-$contacts-icons-color: #eb8671;
+// Цвета иконок, значков в хедере и футере
+$nav-icons-regular-color: #eb8671;
+$contacts-icons-regular-color: #eb8671;
 
-// placeholders в формах, светлозеленые блёклые слова (не только кроссд-аут прайс), цвета иконок, номера телефона с разных режимах; шрифты остальные; размеры шрифтов; font-style. радиокнопки?
+$nav-icons-hover-color: #dd7059;
+$contacts-icons-hover-color: #dd7059;
+
+$nav-icons-active-click-color: #ffab9a;
+$contacts-icons-active-click-color: #ffab9a;
+
+// Размеры шрифтов (Desktop версия, 1440px - возможно тут поменяется, чтобы было адаптивно, но пока так)
+
+$big-title-h1: 64px;
+$middle-title-h2: 48px;
+$small-title-h3: 24px;
+$mini-title-h4: 18px;
+$regular-text: 18px;
+
+// Радиокнопки
+// Составить повторяющиеся сочетания шрифт размер стиль жирность - миксины?

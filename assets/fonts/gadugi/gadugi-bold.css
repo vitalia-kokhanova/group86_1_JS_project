@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Gadugi-Bold';
+	src: url('../fonts/gadugi-bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/gadugi-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/gadugi-bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gadugi-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/gadugi-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/gadugi-bold.svg#gadugi-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
