@@ -9,6 +9,7 @@ export function renderHome(element) {
 		"beforeend",
 		`
         <h1>Home</h1>
+		<div><a href="/auth">Авторизация</a></div>
         `
 	);
 }
