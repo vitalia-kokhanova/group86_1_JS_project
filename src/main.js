@@ -8,6 +8,7 @@ import { renderBasket } from "./pages/basket/basketPage.js";
 import { renderProfile } from "./pages/profile/profilePage.js";
 import { renderCatalog } from "./pages/catalog/catalogPage.js";
 import { renderAuthTest } from "./pages/auth/renderAuthTestPage.js";
+import { registrPage } from "./pages/auth/registerPage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const path = window.location.pathname;
@@ -26,5 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			break;
 		case "/auth":
 			renderAuthTest(appContainer);
+		break;
+		case"/registration":
+		registrPage(appContainer);
+			
+		
+		
 	}
 });
