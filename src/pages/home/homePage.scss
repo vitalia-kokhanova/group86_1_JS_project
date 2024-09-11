@@ -2,7 +2,7 @@
 .header__burger-container{
     display: flex;
     align-items: center;
-     }
+    }
     #burgerImg {
         width: 25px;
         height: 25px;
@@ -23,6 +23,7 @@
     color: $logo-upper-text-color;
     font-size: $small-title-h3;
     font-style: normal;
+    
     }
     .header__img{
         max-width: 2.37em;
@@ -30,17 +31,33 @@
         transform: rotate(23.7deg);
     }
     .header__subtitle{
-        color:$logo-lower-text-color;
-        font-size: $extra-mini-text;
+    color:$logo-lower-text-color;
+    font-size: $extra-mini-text;
     }
     .header__icon__images{
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-end;
-        margin-left:19.7rem;
-        margin-right: 16rem;
-        margin-top: 0.86rem;
+        gap: 15px;
     }
-    #searchImg{
-        padding: 0.93rem;
+    .header__title-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 8.43rem;
+    }
+    .header__title{
+        color:$black-text-color;
+        font-family: $sourcesanspro-font-family;
+        font-size: $small-title-h3;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 0.43rem;
+    }
+    .header__main__title{
+        color:$black-text-color;
+        font-family: $main-font-family;
+        font-size: $big-title-h1;
+        font-style: normal;
+        margin-bottom: 1.75rem;
     }
