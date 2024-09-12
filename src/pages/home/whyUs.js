@@ -1,7 +1,7 @@
 import { appContainer } from "../../vars";
 import "./whyUs.scss";
 
-export function renderWhyUs() {
+export function renderWhyUs(element) {
 	const template = `
         <section class="whyus">
 			<div class="whyus__container container">
@@ -37,5 +37,5 @@ export function renderWhyUs() {
 			</div>
 		</section>
     `;
-	appContainer.insertAdjacentHTML("beforeend", template);
+	element.insertAdjacentHTML("beforeend", template);
 }
