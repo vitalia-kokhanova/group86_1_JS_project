@@ -1,9 +1,8 @@
-import { appContainer } from "../../vars";
 import "./catalogPreview.scss";
 
-export function renderCatalogPreview() {
+export function renderCatalogPreview(element) {
 	const template = `
-	<section class="catalog-preview">
+		<section class="catalog-preview">
 			<div class="catalog-preview__container container">
 				<h2 class="catalog-preview__container-title middle-title">
 					Каталог
@@ -71,5 +70,5 @@ export function renderCatalogPreview() {
 			</div>
 		</section>
     `;
-	appContainer.insertAdjacentHTML("beforeend", template);
+	element.insertAdjacentHTML("beforeend", template);
 }

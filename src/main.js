@@ -11,24 +11,25 @@ import { renderAuthTest } from "./pages/auth/renderAuthTestPage.js";
 import { registrPage } from "./pages/auth/registerPage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const path = window.location.pathname;
-  switch (path) {
-    case "/":
-      renderHome(appContainer);
-      break;
-    case "/basket":
-      renderBasket(appContainer);
-      break;
-    case "/profile":
-      renderProfile(appContainer);
-      break;
-    case "/catalog":
-      renderCatalog(appContainer);
-      break;
-    case "/auth":
-      renderAuthTest(appContainer);
-      break;
-    case "/registration":
-      registrPage(appContainer);
-  }
+	const path = window.location.pathname;
+	switch (path) {
+		case "/":
+			renderHome(appContainer);
+			break;
+		case "/basket":
+			renderBasket(appContainer);
+			break;
+		case "/profile":
+			renderProfile(appContainer);
+			break;
+		case "/catalog":
+			renderCatalog(appContainer);
+			break;
+		case "/auth":
+			renderAuthTest(appContainer);
+			break;
+		case "/registration":
+			registrPage(appContainer);
+			break;
+	}
 });
