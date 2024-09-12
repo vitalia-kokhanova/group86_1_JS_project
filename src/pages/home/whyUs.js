@@ -1,4 +1,3 @@
-import { appContainer } from "../../vars";
 import "./whyUs.scss";
 
 export function renderWhyUs(element) {

@@ -69,6 +69,6 @@ export function renderCatalogPreview(element) {
 				</div>
 			</div>
 		</section>
-    `;
+	`;
 	element.insertAdjacentHTML("beforeend", template);
 }

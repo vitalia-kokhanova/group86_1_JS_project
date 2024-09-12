@@ -3,7 +3,7 @@ import "./firstScreen.scss";
 export function renderFirstScreen(element) {
 	const template = `
     <section class="first-screen">
-			<div class="first-screen__container">
+			<div class="first-screen__container container">
 				<div class="first-screen__inner-wraper">
 					<h2 class="first-screen__title">
 						Подарите ощущение праздника
