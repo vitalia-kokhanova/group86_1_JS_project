@@ -3,69 +3,69 @@
 
 // Candara (regular)
 @font-face {
-	src: url(./assets/fonts/candara/CANDARA.woff) format("woff");
-	font-family: "Candara";
-	font-style: normal;
-	font-weight: 400;
+  src: url(./assets/fonts/candara/CANDARA.woff) format("woff");
+  font-family: "Candara";
+  font-style: normal;
+  font-weight: 400;
 }
 
 // Gadugi (bold)
 @font-face {
-	src: url(./assets/fonts/gadugi/gadugi-bold.woff) format("woff"),
-		url(./assets/fonts/gadugi/gadugi-bold.woff2) format("woff2");
-	font-family: "Gadugi-Bold";
-	font-style: normal;
-	font-weight: 700;
+  src: url(./assets/fonts/gadugi/gadugi-bold.woff) format("woff"),
+    url(./assets/fonts/gadugi/gadugi-bold.woff2) format("woff2");
+  font-family: "Gadugi-Bold";
+  font-style: normal;
+  font-weight: 700;
 }
 
 // Source Sans Pro (regular)
 @font-face {
-	src: url(./assets/fonts/sourcesanspro/sourcesanspro.woff) format("woff"),
-		url(./assets/fonts/sourcesanspro/sourcesanspro.woff2) format("woff2");
-	font-family: "Source Sans Pro";
-	font-style: normal;
-	font-weight: 400;
+  src: url(./assets/fonts/sourcesanspro/sourcesanspro.woff) format("woff"),
+    url(./assets/fonts/sourcesanspro/sourcesanspro.woff2) format("woff2");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
 }
 
 // Lato (regular)
 @font-face {
-	src: url(./assets/fonts/lato/latoregular.woff) format("woff"),
-		url(./assets/fonts/lato/latoregular.woff2) format("woff2");
-	font-family: "Lato";
-	font-style: normal;
-	font-weight: 400;
+  src: url(./assets/fonts/lato/latoregular.woff) format("woff"),
+    url(./assets/fonts/lato/latoregular.woff2) format("woff2");
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
 }
 
 // Lato (medium)
 @font-face {
-	src: url(./assets/fonts/lato/latomedium.woff) format("woff"),
-		url(./assets/fonts/lato/latomedium.woff2) format("woff2");
-	font-family: "Lato";
-	font-style: normal;
-	font-weight: 500;
+  src: url(./assets/fonts/lato/latomedium.woff) format("woff"),
+    url(./assets/fonts/lato/latomedium.woff2) format("woff2");
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
 }
 
 // Lato (semi-bold)
 @font-face {
-	src: url(./assets/fonts/lato/latosemibold.woff) format("woff"),
-		url(./assets/fonts/lato/latosemibold.woff2) format("woff2");
-	font-family: "Lato";
-	font-style: normal;
-	font-weight: 600;
+  src: url(./assets/fonts/lato/latosemibold.woff) format("woff"),
+    url(./assets/fonts/lato/latosemibold.woff2) format("woff2");
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
 }
 
 // Lato (bold)
 @font-face {
-	src: url(./assets/fonts/lato/latobold.woff) format("woff"),
-		url(./assets/fonts/lato/latobold.woff2) format("woff2");
-	font-family: "Lato";
-	font-style: normal;
-	font-weight: 700;
+  src: url(./assets/fonts/lato/latobold.woff) format("woff"),
+    url(./assets/fonts/lato/latobold.woff2) format("woff2");
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
 }
 
 /*
 .montserrat-font {
-	font-family: "Montserrat", sans-serif;
+	font-family:"Montserrat", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: <weight>;
 	font-style: normal;

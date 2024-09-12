@@ -1,31 +1,31 @@
-//import { element } from "../../../vars";
-//import { signInWithEmailAndPassword } from "firebase/auth";
+//import { element } from"../../../vars";
+//import { signInWithEmailAndPassword } from"firebase/auth";
 import "./auth.scss";
 export function renderAuthTest(element) {
-	element.innerHTML = `
+  element.innerHTML = `
   
         <h1>Authentification</h1>
         <div class="avtori">
         <div class='wrapper-form'>
-        <form  class="login" name="login">
-        <h1 name="title" class="title">Авторизация</h1>
+        <form  class="login"name="login">
+        <h1 name="title"class="title">Авторизация</h1>
         <h3 class='errnone' ></h3>
-        <div><p class"text">Ещё нет аккаунта?<p/><a  class="span" href="/registration">Зарегистрироваться</a></div>
+        <div><p class"text">Ещё нет аккаунта?<p/><a  class="span"href="/registration">Зарегистрироваться</a></div>
        
-        <div><input class="email_2" type="email" placeholder='email' name="email" />
+        <div><input class="email_2"type="email"placeholder='email' name="email"/>
         </div>
         
-          <div><input class="password" type="password" placeholder='password' name="password" />
+          <div><input class="password"type="password"placeholder='password' name="password"/>
        </div>
         <div class='wr_btn' >
-          <button id='btnSend' class="button_1" type="submit">Войти</button>
+          <button id='btnSend' class="button_1"type="submit">Войти</button>
         </div>
       </form>
       </div>
       </div>
   
     `;
-    const formLogin = document.forms.login;
+  const formLogin = document.forms.login;
   const err = document.querySelector(".err");
   const { email, password } = formLogin;
 
