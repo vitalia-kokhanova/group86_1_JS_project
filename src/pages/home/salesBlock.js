@@ -10,8 +10,8 @@ export function renderSalesBlock(element) {
 					<button id="newBtn">НОВИНКА</button>
 					<button id="buketBtn">БУКЕТ ДНЯ</button>
 					<img
-						src="./assets/images/Ромашки для наташки.png"
-						alt="flowerImg"
+						src="./assets/images/example_pic.png"
+						alt="Фото товара"
 					/>
 					<div class="main__discount">
 						<div class="main__first__discount">Скидка 50%</div>
@@ -32,8 +32,8 @@ export function renderSalesBlock(element) {
 						<button id="newsBtn">НОВИНКА</button>
 						<button id="secondbucketBtn">БУКЕТ ДНЯ</button>
 						<img
-							src="./assets/images/Ромашки для наташки.png"
-							alt="secondFlower"
+							src="./assets/images/example_pic.png"
+							alt="Фото товара"
 						/>
 						<div class="main__second__discount">Скидка 50%</div>
 						<div class="main__card__title">
@@ -60,8 +60,8 @@ export function renderSalesBlock(element) {
 					<button id="thirdCardNewBtn">НОВИНКА</button>
 					<button id="thirdCardbuketBtn">БУКЕТ ДНЯ</button>
 					<img
-						src="./assets/images/Ромашки для наташки.png"
-						alt="flowerThirdImg"
+						src="./assets/images/example_pic.png"
+						alt="Фото товара"
 					/>
 					<div class="main__thirdCard-discount">Скидка 50%</div>
 					<div class="main__third__card__titles">
@@ -83,8 +83,8 @@ export function renderSalesBlock(element) {
 					<button id="fourthNewsBtn">НОВИНКА</button>
 					<button id="fourthbucketBtn">БУКЕТ ДНЯ</button>
 					<img
-						src="./assets/images/Ромашки для наташки.png"
-						alt="flowerImg"
+						src="./assets/images/example_pic.png"
+						alt="Фото товара"
 					/>
 					<div class="main__fourth__discount">Скидка 50%</div>
 					<div class="main__fourth__titles">
