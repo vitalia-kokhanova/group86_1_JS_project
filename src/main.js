@@ -9,6 +9,7 @@ import { renderProfile } from "./pages/profile/profilePage.js";
 import { renderCatalog } from "./pages/catalog/catalogPage.js";
 import { renderAuthTest } from "./pages/auth/renderAuthTestPage.js";
 import { registrPage } from "./pages/auth/registerPage.js";
+import { renderContacts } from "./pages/contacts/contactsPage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const path = window.location.pathname;
@@ -30,6 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			break;
 		case "/registration":
 			registrPage(appContainer);
+			break;
+		case "/contacts":
+			renderContacts(appContainer);
 			break;
 	}
 });

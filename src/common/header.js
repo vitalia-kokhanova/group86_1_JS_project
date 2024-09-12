@@ -39,7 +39,7 @@ export function renderHeader() {
 							alt="Значок корзины"
 							id="baksetImg"
 					/></a>
-					<a href="/profile"
+					<a href="/auth"
 						><img
 							src="./assets/icons/header_icons/profile_icon.png"
 							alt="Значок профиля"
