@@ -46,10 +46,6 @@
     }
     .header__icon__images{
         @include flexStyle;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 15px;
-        margin-left: 135px; 
     }
     .main__content{
         background: url('/assets/images/image.png');
@@ -113,20 +109,15 @@ margin-top: 2.2em;
 @include flexStyle;
 }
 .main__card{
-    @include cardDesign;
+@include cardDesign;
 }
 .main__img{
    @include imgDesign;
 }
 
 #mainsalesBtn{
-    color: $white-text-color;
-    background-color: $slider-dash-on-color;
     @include btnStyles;
     @include btntransform;
-    margin-top: 1em;
-    border-radius:  6px 6px 0px;
-    cursor: pointer;
 }
 #newBtn{
 background-color: $new-badge-color;
@@ -162,16 +153,13 @@ margin-bottom: 0;
 }
 .main__second__title{
 @include textwrap;
-font-size:$new-medium-text;
-font-family: $main-font-family;
-font-weight: 500;
 }
 .main__card-price{
     display: flex;
     align-items: center;
     flex-direction: column;
-    // white-space: nowrap;
     justify-content: flex-start;
+    position: relative;
 }
 // 5400
 .main__first__price{
@@ -191,9 +179,15 @@ font-weight: 500;
     border-radius: 2em;
     cursor: pointer;  
     align-self: center;
-    margin-left: 120px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    margin-right: 16px;
-    align-self: center;
+    position: absolute;
+    margin-left: 110px;
+    top: 40px;
+    bottom: 2px;
+    right: 16px;
+}
+.main__second__card{
+    @include cardDesign;
+}
+.main__sec__img{
+    @include imgDesign;
 }
