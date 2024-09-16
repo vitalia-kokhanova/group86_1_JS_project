@@ -120,31 +120,36 @@ margin-top: 2.2em;
     background-color: $card-color;
     border-radius: 20px;
     margin-left: 144px;
+    position: relative;
+    cursor: pointer;
 }
 #mainsalesBtn{
     color: $white-text-color;
     background-color: $slider-dash-on-color;
     @include btnStyles;
+    @include btntransform;
     margin-top: 1em;
 }
 #newBtn{
-    background-color: $new-badge-color;
-   @include btnStyles;
-   color: $white-text-color;
+background-color: $new-badge-color;
+@include btnStyles;
+color: $white-text-color;
 }
 #buketBtn{
     @include btnStyles;
     color: $white-text-color;
     background-color: $bouquet-of-the-day-badge-color;
 }
+// poga 50%
 .main__discount{
     @include flexStyle;
     background-color: $sale-badge-color;
-    border-radius: 6px;
-    text-align: right;
-    max-width: 120px;
-    padding: 3px 3px 3px 3px;
-    justify-content: flex-start;
-    align-items: flex-end;
+    @include btntransform;
     color: $price-and-sale-text-color;
 }
+// №225 “Ромашки для Наташки”
+.main__title{
+margin: 9px;
+}
+
+

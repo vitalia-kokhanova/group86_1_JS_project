@@ -8,3 +8,14 @@
     border-radius: 15px;
     padding: 4px;
 }
+@mixin btntransform{
+    transform: translateY(-35px);
+    border-radius: 6px;
+    text-align: right;
+    max-width: 120px;
+    padding: 3px 3px 3px 3px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+}
