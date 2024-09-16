@@ -1,6 +1,21 @@
 // стили которые повторяются
 @mixin flexStyle{
     display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+}
+@mixin cardDesign{
+    background-color: $card-color;
+    border-radius: 20px;
+    margin-left: 144px;
+    position: relative;
+    cursor: pointer;
+    max-width: 284px;
+}
+@mixin imgDesign{
+    margin: 10px 9px;
 }
 @mixin btnStyles {
     border: none;
@@ -19,3 +34,50 @@
     position: absolute;
     right: 0;
 }
+@mixin textwrap{
+font-weight: 500;
+color: $black-text-color;
+display: flex;
+justify-content: center;
+align-items: center;
+white-space: nowrap;
+}
+
+@mixin firstPrice{
+margin-left: 36px;
+margin-bottom: 0;
+margin-top: 60px;
+margin-right: 24px;
+font-weight: 500;
+text-decoration: line-through;
+color: $menu-items-off-text-color;
+font-size: $new-smallest-text;
+font-family: $main-font-family;
+align-self: flex-start;
+justify-self: flex-start;
+}
+@mixin secondPrice{
+color: $price-and-sale-text-color;
+font-family: $main-font-family;
+margin-left: 20px;
+font-size: $new-medium-text;
+font-weight: 500;
+align-self: flex-start;
+margin-left: 36px;
+}
+#addBtn{
+    background-color: $slider-dash-on-color;
+    border: none;
+    outline: none;
+    // color: $white-text-color;
+    padding: 6px 20px;
+    border-radius: 2em;
+    cursor: pointer;  
+    align-self: center;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-right: 16px;
+}
+
+
