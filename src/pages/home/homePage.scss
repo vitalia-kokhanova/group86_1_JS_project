@@ -111,34 +111,34 @@ margin-top: 2.2em;
 }
 .main__container--cards{
 @include flexStyle;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    gap: 13px;
 }
 .main__card{
-    background-color: $card-color;
-    border-radius: 20px;
-    margin-left: 144px;
-    position: relative;
-    cursor: pointer;
+    @include cardDesign;
 }
+.main__img{
+   @include imgDesign;
+}
+
 #mainsalesBtn{
     color: $white-text-color;
     background-color: $slider-dash-on-color;
     @include btnStyles;
     @include btntransform;
     margin-top: 1em;
+    border-radius:  6px 6px 0px;
+    cursor: pointer;
 }
 #newBtn{
 background-color: $new-badge-color;
 @include btnStyles;
 color: $white-text-color;
+border-radius: 6px 6px 0px
 }
 #buketBtn{
     @include btnStyles;
     color: $white-text-color;
     background-color: $bouquet-of-the-day-badge-color;
+    border-radius:  6px 6px 0px;
 }
 // poga 50%
 .main__discount{
@@ -150,6 +150,50 @@ color: $white-text-color;
 // №225 “Ромашки для Наташки”
 .main__title{
 margin: 9px;
+font-size: $new-medium-text;
+font-family: $main-font-family;
+font-weight: 500;
+color: $black-text-color;
+display: flex;
+justify-content: center;
+align-items: center;
+white-space: nowrap;
+margin-bottom: 0;
 }
-
-
+.main__second__title{
+@include textwrap;
+font-size:$new-medium-text;
+font-family: $main-font-family;
+font-weight: 500;
+}
+.main__card-price{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // white-space: nowrap;
+    justify-content: flex-start;
+}
+// 5400
+.main__first__price{
+    @include firstPrice;
+}
+// 3700 rub
+.main__second__price{
+@include secondPrice;
+}
+// btn zakazatj
+#addBtn{
+    background-color: $slider-dash-on-color;
+    border: none;
+    outline: none;
+    color: $white-text-color;
+    padding: 6px 20px;
+    border-radius: 2em;
+    cursor: pointer;  
+    align-self: center;
+    margin-left: 120px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-right: 16px;
+    align-self: center;
+}
