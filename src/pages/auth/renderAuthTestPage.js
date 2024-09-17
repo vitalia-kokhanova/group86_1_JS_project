@@ -1,8 +1,8 @@
 //import { element } from"../../../vars";
 //import { signInWithEmailAndPassword } from"firebase/auth";
-import "./auth.scss";
+import "./_auth.scss";
 export function renderAuthTest(element) {
-  element.innerHTML = `
+	element.innerHTML = `
   
         <h1>Authentification</h1>
         <div class="avtori">
@@ -25,26 +25,26 @@ export function renderAuthTest(element) {
       </div>
   
     `;
-  const formLogin = document.forms.login;
-  const err = document.querySelector(".err");
-  const { email, password } = formLogin;
+	const formLogin = document.forms.login;
+	const err = document.querySelector(".err");
+	const { email, password } = formLogin;
 
-  formLogin.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (email.value == "" || password.value == "") {
-      err.classList.remove("none");
-      err.textContent = "Заполните все поля";
-      return;
-    }
-    err.classList.add("none");
-    signInWithEmailAndPassword(auth, email.value, password.value)
-      .then(() => {
-        window.location.pathname = "/";
-      })
-      .catch((errText) => {
-        console.error(errText);
-        err.classList.remove("none");
-        err.textContent = "Не верный логин или пароль";
-      });
-  });
+	formLogin.addEventListener("submit", (e) => {
+		e.preventDefault();
+		if (email.value == "" || password.value == "") {
+			err.classList.remove("none");
+			err.textContent = "Заполните все поля";
+			return;
+		}
+		err.classList.add("none");
+		signInWithEmailAndPassword(auth, email.value, password.value)
+			.then(() => {
+				window.location.pathname = "/";
+			})
+			.catch((errText) => {
+				console.error(errText);
+				err.classList.remove("none");
+				err.textContent = "Не верный логин или пароль";
+			});
+	});
 }

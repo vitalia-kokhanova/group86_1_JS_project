@@ -1,4 +1,4 @@
-import "./contactsPage.scss";
+import "./_contactsPage.scss";
 
 import { renderHeader } from "../../common/header";
 import { renderMainContainer } from "../../common/common";

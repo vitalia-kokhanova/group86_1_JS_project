@@ -1,6 +1,6 @@
-import "./auth.scss";
+import "./_auth.scss";
 export function registrPage(element) {
-  element.innerHTML = `
+	element.innerHTML = `
     <div class='wrapper-form'>
           <form name="Reg">
           <h1  class="name_1"name="title">Регистрация</h1>

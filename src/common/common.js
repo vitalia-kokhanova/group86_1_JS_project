@@ -1,5 +1,5 @@
 import { appContainer } from "../vars";
-import "./common.scss";
+import "./_common.scss";
 
 export function renderMainContainer() {
 	const template = `

@@ -1,0 +1,34 @@
+@import "_fonts";
+@import "_vars";
+
+%flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+%flex-column-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+%flex-justify-center {
+	display: flex;
+	justify-content: center;
+}
+
+%flex-justify-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+%flex-align-center {
+	display: flex;
+	align-items: center;
+}
+
+%flex-j-center-a-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

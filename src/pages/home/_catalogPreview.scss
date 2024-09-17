@@ -1,0 +1,78 @@
+@import "/fonts";
+@import "/vars";
+@import "/src/common/common";
+@import "/mixins";
+@import "/templates";
+
+.catalog-preview {
+	&__container {
+		@extend %flex-column !optional;
+
+		&-title {
+			margin-bottom: 3%;
+		}
+	}
+
+	&__inner-wrapper {
+		@extend %flex-justify-between !optional;
+
+		.inner-box {
+			@extend %flex-column !optional;
+			justify-content: space-between;
+		}
+
+		.side-box {
+			width: 23.5%;
+		}
+
+		.central-box {
+			width: 50%;
+
+			.text-box {
+				width: 30%;
+				height: 100%;
+			}
+		}
+
+		.block {
+			position: relative;
+			display: flex;
+		}
+
+		.block-1,
+		.block-6 {
+			margin-bottom: 7%;
+		}
+
+		.block-4 {
+			margin-block: 3%;
+		}
+
+		.text-box {
+			&__type-two {
+				right: 0px;
+				border-radius: 10px 0px 0px 10px;
+				padding: 9px;
+			}
+
+			&__type-three {
+				left: 0px;
+				border-radius: 0px 10px 10px 0px;
+				padding: 9px;
+			}
+		}
+	}
+
+	&__link-wrapper {
+		@extend %flex-justify-center !optional;
+		padding: 20px 0px;
+
+		.link {
+			color: $menu-items-off-text-color;
+			text-decoration: none;
+			&:hover {
+				text-shadow: 0 0 15px #8e8d6f;
+			}
+		}
+	}
+}

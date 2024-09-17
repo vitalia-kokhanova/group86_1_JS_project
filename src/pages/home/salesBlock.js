@@ -1,4 +1,4 @@
-import "./salesBlock.scss";
+import "./_salesBlock.scss";
 
 export function renderSalesBlock(element) {
 	const template = `

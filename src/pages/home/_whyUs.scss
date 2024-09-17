@@ -1,0 +1,73 @@
+@import "/fonts";
+@import "/vars";
+@import "/src/common/common";
+@import "/mixins";
+@import "/templates";
+
+.whyus {
+	&__container {
+		@extend %flex-column !optional;
+
+		&-title {
+			margin-bottom: 3%;
+		}
+	}
+
+	&__inner-wrapper {
+		@extend %flex-column !optional;
+	}
+
+	&__box {
+		display: flex;
+		position: relative;
+
+		&-first,
+		&-third {
+			justify-content: flex-end;
+		}
+
+		&-first {
+			margin-bottom: 1%;
+		}
+		&-second {
+			justify-content: flex-start;
+			margin-bottom: 6%;
+		}
+	}
+
+	.text-wrapper {
+		background-color: $white-background-color;
+		position: absolute;
+		height: fit-content;
+
+		&-first {
+			left: 20%;
+			top: 37%;
+			padding: 5% 7%;
+		}
+
+		&-first,
+		&-third {
+			max-width: 55%;
+			border-radius: 20px 0px 20px 20px;
+		}
+
+		&-second {
+			max-width: 45%;
+			border-radius: 0px 20px 20px 20px;
+			left: 30%;
+			top: 55%;
+			padding: 6% 4%;
+		}
+
+		&-third {
+			left: 15%;
+			top: 30%;
+			padding: 7% 5%;
+		}
+	}
+
+	p {
+		line-height: 120%;
+	}
+}
