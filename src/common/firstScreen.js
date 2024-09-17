@@ -1,4 +1,4 @@
-import "./firstScreen.scss";
+import "./_firstScreen.scss";
 
 export function renderFirstScreen(element) {
 	const template = `

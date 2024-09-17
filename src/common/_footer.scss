@@ -1,0 +1,201 @@
+@import "/fonts";
+@import "/vars";
+@import "./common";
+@import "/templates";
+@import "/mixins";
+
+.footer {
+	&__container,
+	&__catalog-wrapper,
+	&__contacts-container {
+		@extend %flex-column !optional;
+	}
+
+	.block-link,
+	.catalog-block,
+	.socials-item,
+	.socials-link {
+		display: flex;
+	}
+
+	&__logo-wrapper,
+	&__contacts-wrapper {
+		@extend %flex-justify-center !optional;
+	}
+
+	&__contacts-container,
+	.tel-icon-wrapper,
+	.email-icon-wrapper {
+		@extend %flex-align-center !optional;
+	}
+
+	.catalog-box,
+	.socials-nav,
+	.socials-list {
+		@extend %flex-justify-between !optional;
+	}
+
+	.tel-box,
+	.email-box {
+		@extend %flex-j-center-a-center !optional;
+	}
+
+	&__logo-wrapper {
+		margin-top: 1%;
+	}
+
+	&__logo-wrapper,
+	&__catalog-wrapper {
+		margin-bottom: 7%;
+	}
+
+	&__contacts-wrapper {
+		margin-bottom: 5%;
+	}
+
+	.box-one {
+		margin-bottom: 2%;
+	}
+
+	.catalog-block {
+		position: relative;
+	}
+
+	&__contacts-title {
+		margin-bottom: 7%;
+	}
+
+	&__tel-box {
+		margin-bottom: 2%;
+	}
+
+	&__email-box,
+	&__socials-nav {
+		margin-bottom: 7%;
+	}
+
+	&__copyright-text {
+		font-size: $small-title-h3;
+	}
+
+	.tel-icon-wrapper,
+	.email-icon-wrapper {
+		img {
+			width: 100%;
+		}
+	}
+
+	/* Стили для телефона и эл.почты, которые можно применить на странице Контакты */
+	&__tel,
+	&__email {
+		&:link,
+		&:visited,
+		&:active,
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:link,
+		&:visited {
+			color: $black-text-color;
+		}
+
+		&:hover {
+			color: $contacts-icons-hover-color;
+		}
+
+		&:active {
+			color: $contacts-icons-active-click-color;
+		}
+	}
+
+	.socials-nav {
+		width: 60%;
+	}
+
+	.socials-list {
+		width: 100%;
+	}
+
+	/* Стили для иконок соц. сетей, которые можно применить на странице Контакты */
+	.socials-item,
+	.socials-link {
+		display: flex;
+
+		img {
+			width: 100%;
+		}
+
+		a svg:hover #facebook,
+		a svg:hover #viber,
+		a svg:hover #instagram,
+		a svg:hover #whatsapp {
+			fill: $contacts-icons-hover-color;
+		}
+
+		a svg:active #facebook,
+		a svg:active #viber,
+		a svg:active #instagram,
+		a svg:active #whatsapp {
+			fill: $contacts-icons-active-click-color;
+		}
+	}
+
+	/* Стили для логотипа, которые можно сделать общими и для хедера */
+	.logo-title {
+		font: {
+			family: $logo-big-text-font-family;
+			size: $small-title-h3;
+			weight: $bold;
+		}
+		color: $logo-upper-text-color;
+	}
+
+	.logo-subtitle {
+		font: {
+			family: $logo-small-text-font-family;
+			size: $extra-mini-text;
+		}
+		color: $logo-lower-text-color;
+	}
+
+	.logo-container,
+	.logo-box,
+	.logo-titles-box {
+		display: flex;
+	}
+	.logo-titles-box {
+		flex-direction: column;
+	}
+
+	.logo-container {
+		align-items: center;
+	}
+
+	.logo-img {
+		width: 100%;
+	}
+
+	&__logo-container {
+		margin-left: -20px;
+	}
+
+	/* Стили, которые возможно удалим, когда в бургер-меню появится кнопка Контакты */
+	.contacts-page-link {
+		color: $black-text-color;
+		text-decoration: none;
+		&:hover {
+			color: #4f4d4d;
+			text-shadow: 0 0 1em rgb(95, 94, 95);
+		}
+
+		&:link,
+		&:visited {
+			color: $black-text-color;
+		}
+
+		&:active {
+			color: #737272;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-import "./homePage.scss";
+import "./_homePage.scss";
 import { appContainer } from "../../vars.js";
 import { renderHeader } from "../../common/header.js";
 import { renderMainContainer } from "../../common/common.js";

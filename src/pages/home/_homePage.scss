@@ -1,4 +1,8 @@
-@import "vars";
+@import "/fonts";
+@import "/vars";
+@import "/src/common/common";
+@import "/mixins";
+@import "/templates";
 
 .header__burger-container {
 	display: flex;

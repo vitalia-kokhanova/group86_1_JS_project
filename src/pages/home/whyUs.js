@@ -1,4 +1,4 @@
-import "./whyUs.scss";
+import "./_whyUs.scss";
 
 export function renderWhyUs(element) {
 	const template = `
@@ -8,28 +8,28 @@ export function renderWhyUs(element) {
 					Почему именно мы?
 				</h2>
 				<div class="whyus__inner-wrapper">
-					<div class="whyus__inner-box whyus__box-first">
-						<div class="whyus-box__text-wrapper whyus-first-box__text-wrapper">
-							<p class="whyus-box__text whyus-first-box__text middle-text">Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант. Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант</p>
+					<div class="whyus__box whyus__box-first">
+						<div class="text-wrapper text-wrapper-first">
+							<p class="lato-medium_middle-small-text text-first">Мы используем только самые свежие цветы, поэтому наши букеты сохраняют свою красоту и аромат надолго.<br/><br/>Каждая наша композиция – это результат кропотливой работы флористов, которые вкладывают в нее душу и мастерство.</p>
 						</div>
-						<div class="whyus-box__image-wrapper whyus-first-box__image-wrapper">
-							<img src="./assets/images/home_page_img/aboutus_photo1.png" alt="Фото с зимним декором" class="whyus-box__image whyus-first-box__image"/>
-						</div>
-					</div>
-					<div class="whyus__inner-box whyus__box-second">
-						<div class="whyus-box__text-wrapper whyus-second-box__text-wrapper">
-							<p class="whyus-box__text whyus-second-box__text middle-text">Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант</p>
-						</div>
-						<div class="whyus-box__image-wrapper whyus-second-box__image-wrapper">
-							<img src="./assets/images/home_page_img/aboutus_photo2.png" alt="Фото с пирожными" class="whyus-box__image whyus-second-box__image"/>
+						<div class="image-wrapper image-wrapper-first">
+							<img src="./assets/images/home_page_img/aboutus_photo1.png" alt="Фото с зимним декором" class="image image-first"/>
 						</div>
 					</div>
-					<div class="whyus__inner-box whyus__box-third">
-						<div class="whyus-box__text-wrapper whyus-third-box__text-wrapper">
-							<p class="whyus-box__text whyus-third-box__text middle-text">Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант</p>
+					<div class="whyus__box whyus__box-second">
+						<div class="text-wrapper text-wrapper-second">
+							<p class="lato-medium_middle-small-text text-second">Вы можете выбрать любую цветочную композицию из нашего каталога или заказать свой вариант</p>
 						</div>
-						<div class="whyus-box__image-wrapper whyus-third-box__image-wrapper">
-							<img src="./assets/images/home_page_img/aboutus_photo3.png" alt="Фото с пионами" class="whyus-box__image whyus-third-box__image"/>
+						<div class="image-wrapper image-wrapper-second">
+							<img src="./assets/images/home_page_img/aboutus_photo2.png" alt="Фото с пирожными" class="image image-second"/>
+						</div>
+					</div>
+					<div class="whyus__box whyus__box-third">
+						<div class="text-wrapper text-wrapper-third">
+							<p class="lato-medium_middle-small-text text-third">Наш каталог цветов – это бесконечное поле для вдохновения. Но если вы не нашли то, что искали, мы с радостью создадим композицию по вашим эскизам или описанию.</p>
+						</div>
+						<div class="image-wrapper image-wrapper-third">
+							<img src="./assets/images/home_page_img/aboutus_photo3.png" alt="Фото с пионами" class="image image-third"/>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,42 @@
+@import "/fonts";
+@import "/vars";
+@import "/src/common/common";
+@import "/mixins";
+@import "/templates";
+
+.delivery-block {
+	background-color: $white-background-color;
+
+	@extend %flex-column-center !optional;
+	position: relative;
+
+	&__image-container {
+		display: flex;
+		flex: 0 0 auto;
+		z-index: 1;
+		img {
+			@include object-fit;
+		}
+	}
+
+	&__content-container {
+		@extend %flex-j-center-a-center !optional;
+		position: absolute;
+		top: 20%;
+		z-index: 2;
+	}
+
+	&__inner-wrapper {
+		@extend %flex-column-center !optional;
+		width: 85%;
+	}
+
+	&__container-title {
+		align-self: flex-start;
+		margin-bottom: 10%;
+	}
+
+	&__text {
+		width: 75%;
+	}
+}

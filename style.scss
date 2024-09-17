@@ -1,21 +1,18 @@
-@import "vars";
-@import "fonts";
+@import "_fonts";
+@import "_vars";
+@import "/src/common/common";
+@import "_mixins";
+@import "_templates";
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-	font-family: $main-font-family;
-	font-style: normal;
-	font-weight: 400;
-	color: $black-text-color;
-	background-color: $main-background-color;
-}
-
-.container {
-	max-width: 1170px;
-	margin: 0 auto;
-}
+@import "/src/common/common.scss";
+@import "/src/common/header.scss";
+@import "/src/common/firstScreen.scss";
+@import "/src/common/footer.scss";
+@import "/src/pages/auth/auth.scss";
+@import "/src/pages/home/homePage.scss";
+@import "/src/pages/home/salesBlock.scss";
+@import "/src/pages/home/whyUs.scss";
+@import "/src/pages/home/catalogPreview.scss";
+@import "/src/pages/home/deliveryBlock.scss";
+@import "/src/pages/home/ideaForm.scss";
+@import "/src/pages/contacts/contactsPage.scss";

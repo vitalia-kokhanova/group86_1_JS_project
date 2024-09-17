@@ -1,0 +1,723 @@
+@import "/fonts";
+@import "/vars";
+@import "/templates";
+@import "/mixins";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: {
+		family: $main-font-family;
+		weight: $regular;
+	}
+	font-style: normal;
+	color: $black-text-color;
+	background-color: $main-background-color;
+}
+
+/* Стили для главного div app */
+.app__wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Стили для ограничивающего контейнера */
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+/* Отступ между разделами на страницах */
+section {
+	margin-bottom: 5%;
+}
+
+/* Убираем точки возле пунктов списка */
+ul {
+	list-style-type: none;
+}
+
+/* Стили для текстов, заголовков и тд */
+
+// Стиль для главного заголовка на главной
+// Montserrat, bold, 64px
+
+.main-page__main-title {
+	font: {
+		size: $big-title-h1;
+		weight: $bold;
+	}
+}
+
+// Стиль для главных заголовков на всех остальных страницах (Корзина, Каталог, Карточка товара, Контакты)
+// Montserrat, bold, 58px
+
+.secondary-main-title {
+	font: {
+		size: $secondary-big-title-h1;
+		weight: $bold;
+	}
+}
+
+// Стиль для крупных заголовков h2 - те, которые
+// Montserrat, bold, 48px
+
+.middle-title {
+	font: {
+		size: $middle-title-h2;
+		weight: $bold;
+	}
+}
+
+// Стиль для крупных заголовков h2
+// Montserrat, semi-bold, 48px
+
+.middle-title_semibold {
+	font: {
+		size: $middle-title-h2;
+		weight: $semi-bold;
+	}
+}
+
+// Стиль, который только 1 раз - для подзаголовка на главной
+// Source Sans Pro, regular, 24px
+
+.main-page__subtitle {
+	font: {
+		family: $sourcesanspro-font-family;
+		size: $small-title-h3;
+	}
+}
+
+// Стили для логотипа (хедер и футер)
+// Gadugi, bold, 24px, цвет #073C2A
+.logo-title {
+	font: {
+		family: $logo-big-text-font-family;
+		size: $small-title-h3;
+		weight: $bold;
+	}
+	color: $logo-upper-text-color;
+}
+
+// Candara, regular, 11px, цвет #0A3F23
+.logo-subtitle {
+	font: {
+		family: $logo-small-text-font-family;
+		size: $extra-mini-text;
+	}
+	color: $logo-lower-text-color;
+}
+
+// Стили для средних заголовков и текстов (Текст в разделе Доставка на главной и заголовки-названия товаров на странице Корзина)
+// Montserrat, medium, 36px
+
+.middle-small-title {
+	font: {
+		size: $middle-text-h3;
+		weight: $medium;
+	}
+}
+
+// Стили для средних заголовков и текстов (раздел Контакты в футере и заголовки в Личном кабинете)
+// Montserrat, semi-bold, 36px
+
+.middle-small-title_semibold {
+	font: {
+		size: $middle-text-h3;
+		weight: $semi-bold;
+	}
+}
+
+// Стили для средних заголовков и текстов (страница Контакты)
+// Montserrat, bold, 36px
+
+.middle-small-title_bold {
+	font: {
+		size: $middle-text-h3;
+		weight: $bold;
+	}
+}
+
+// Стили для текстов, цифр среднего размера (плейсхолдеры в трёх формах (Идея для букета (главная стр.), Оформление заказа (Корзина) и Вопросы (стр. Контакты)), а также цифра (количество товара) на странице Корзина
+// Lato, regular, 36px
+.middle-small_ordinary-text {
+	font: {
+		family: $lato-font-family;
+		size: $middle-text-h3;
+	}
+}
+
+// Стиль для цифры для добавления количества единиц товара - 1 + на странице "Карточка товара"
+.add-item_number-text {
+	font: {
+		family: $lato-font-family;
+		size: $small-title-h3;
+	}
+}
+
+// Стили для текстов в блоке Почему мы? (главная) и для подзаголовков на странице Корзина
+// Lato, medium, 24px
+.lato-medium_middle-small-text {
+	font: {
+		family: $lato-font-family;
+		size: $small-title-h3;
+		weight: $medium;
+	}
+}
+
+// Стили для разных мест: Montserrat, 24px
+
+// В Личном кабинете, в разделе Просмотренные - заголовок/название товара; в Личном кабинете в разделе Личные данные - заголовки типо ФИО, Телефон и тд.
+// Montserrat, medium, 24px
+.m-medium_middle-small-text {
+	font: {
+		size: $small-title-h3;
+		weight: $medium;
+	}
+}
+
+// В футере в разделе Контакты - номер телефона и почта; на странице Карточка товара - заголовок Отзывы(1) и заголовок Описание; в Личном кабинете в разделе Просмотренные - заголовок Просмотренные; в Личном кабинете в разделе Отзывы - заголовок Отзывы; на странице Каталог - подзаголовки слева Категории/Повод/Кому
+// Montserrat, semi-bold, 24px
+.m-semibold_middle-small-text {
+	font: {
+		size: $small-title-h3;
+		weight: $semi-bold;
+	}
+}
+
+// Стили для подзаголовков "Кому:" и "Повод:" на странице Карточка товара и в Личном кабинете в разделе Просмотренные
+// Montserrat, semi-bold, 20px
+.occasion__small-title {
+	font: {
+		size: 20px;
+		weight: $semi-bold;
+	}
+}
+
+// Cтиль для розового подзаголовка в Личном кабинете в разделе Отзывы
+// Montserrat, medium, 20px, цвет #D7537A
+.profile-feedback__pink-subtitle {
+	font: {
+		size: 20px;
+		weight: $medium;
+	}
+	color: $btn-general-color;
+}
+
+// Cтиль для розового подзаголовка "Отзыв от Лена Ленина" на странице Карточка товара
+// Lato, medium, 20px, цвет #D7537A
+.card-page__pink-subtitle {
+	font: {
+		family: $lato-font-family;
+		size: 20px;
+		weight: $medium;
+	}
+	color: $btn-general-color;
+}
+
+// Стили для Montserrat, 18px
+
+// Стили для заголовков на страницах Регистрация/Авторизация
+// Montserrat, bold, 18px
+.register-page__main-title {
+	font: {
+		size: $regular-text-h4;
+		weight: $bold;
+	}
+}
+
+// Стили для серого подзаголовка "Отзывов(1)" на странице Карточка товара и для серого подзаголовка "Главная / Каталог / Букеты" который будет отображаться на страницах "Каталог", "Карточка товара", "Контакты" - типо показывает путь к странице, где мы находимся, на белом фоне с большими цветами.
+// Montserrat, semi-bold, 18px, цвет #8E8D6F серый
+.small-grey-title {
+	font: {
+		size: $regular-text-h4;
+		weight: $semi-bold;
+	}
+	color: $menu-items-off-text-color;
+}
+
+// Стиль для подзаголовка "Есть в наличии" на странице "Карточка товара"
+// Montserrat, semi-bold, 18px, цвет #7EA048 зелёный
+.small-green-title {
+	font: {
+		size: $regular-text-h4;
+		weight: $semi-bold;
+	}
+	color: $price-and-sale-text-color;
+}
+
+// Стили для Lato, 18px
+
+// Стили для маленьких текстов: текст отзыва в разделе "Отзывы" в Личном кабинете; в Корзине маленькие черный тексты возле радиокнопок; на странице "Карточка товара": маленькие черный тексты после слов "Кому:" и "Повод:", черный текст под Описание и текст под Отзывы; маленький черный текст на странице "Контакты"; в Личном кабинете в разделе "Адресная книга" маленькие черный адреса, которые высветятся уже после того, как пользователь их сохранил.
+
+// Lato, Medium, 18px
+
+.small-text {
+	font: {
+		family: $lato-font-family;
+		weight: $medium;
+		size: $regular-text-h4;
+	}
+}
+
+// Стиль для черного подчёркнутого текста: на странице "Корзина" - опция "Новый покупатель"; в Личном кабинете - заголовок выбранной вкладки.
+// Lato, medium, 18 px, цвет чёрный, подчёркнутый
+
+.small-text_black_underlined {
+	@extend .small-text;
+	text-decoration: underline;
+}
+
+// Стиль для "Перейти к каталогу" (главная) и "Постоянный покупатель" (Корзина)
+// Lato, medium, 18px, цвет #8E8D6F серый
+
+.small-text_grey {
+	@extend .small-text;
+	color: $menu-items-off-text-color;
+}
+
+// Стиль для перечёркнутой цены: на страницах "Карточка товара", "Корзина" и в Личном кабинете в разделе "Просмотренные"
+// Lato, medium, 18 px, цвет #8E8D6F серый, зачёркнутый
+
+.price-text_middle_crossed {
+	@extend .small-text_grey;
+	text-decoration: line-through;
+}
+
+// Стиль для розовых слов возле радиокнопок на странице "Корзина"
+// Lato, medium, 18 px, цвет #FD4F79 розовый
+
+.basket-page__pink-text {
+	@extend .small-text;
+	color: $hit-badge-color;
+}
+
+// Lato, regular, 18px
+
+// Стиль для названий категорий мелких на странице "Каталог", а также для текста после слов "Кому:" и "Повод:" в Личном кабинете в разделе "Просмотренные"
+// Lato, regular, 18px, цвет черный
+
+.small-text_lato-regular {
+	font: {
+		family: $lato-font-family;
+		size: $regular-text-h4;
+	}
+}
+
+// Стиль для пунктов меню в Личном кабинете слева вкладки, которые не выбраны типо; стиль для плейсхолдеров в Личном кабинете в разделах Личные данные и Адресная книга.
+// Lato, regular, 18px, цвет #8E8D6F серый
+
+.menu-placeholders-text {
+	@extend .small-text_lato-regular;
+	color: $menu-items-off-text-color;
+}
+
+// Стиль для текста "Выйти" в Личном кабинете
+// Lato, regular, 18px, цвет #D7537A розовый
+
+.exit-profile_button-text {
+	@extend .small-text_lato-regular;
+	color: $btn-general-color;
+}
+
+// Montserrat, 16px
+
+// Стиль для названия товара в маленьких карточках товаров на страницах "Главная" (раздел Скидки), "Каталог", "Карточка товара" (раздел Вместе покупают)
+// Montserrat, medium, 16px, цвет черный
+
+.small-title_medium {
+	font: {
+		size: $small-text;
+		weight: $medium;
+	}
+}
+
+// Стиль для зелёной актуальный цены на маленьких карточках товаров на страницах "Главная" (раздел Скидки), "Каталог", "Карточка товара" (раздел Вместе покупают)
+// Montserrat, medium, 16px, цвет #7EA048 зелёный
+
+.price-text_small_green {
+	@extend .small-title_medium;
+	color: $price-and-sale-text-color;
+}
+
+// Стиль для слова "Фильтр" на странице "Каталог" и для заголовков в мини-каталогах на главной странице - на карточках в разделе Каталог и в футере на каждой странице
+// Montserrat, semi-bold, 16px, цвет черный
+
+.small-title_semibold {
+	font: {
+		size: $small-text;
+		weight: $semi-bold;
+	}
+}
+
+// Стиль для плейсхолдеров на страничках Регистрация/Авторизация
+// Lato, regular, 15px, цвет #00000054 полупрозрачный чёрный
+.register-page__placeholder {
+	font: {
+		family: $lato-font-family;
+		size: 15px;
+	}
+	color: $input-placeholder-text-color;
+}
+
+// Стиль для даты под отзывом в Личном кабинете в разделе Отзывы
+// Lato, regular, 14px, цвет черный
+.profile-feedback__date-text {
+	font: {
+		family: $lato-font-family;
+		size: $little-text;
+	}
+}
+
+// Стиль для подзаголовка черным цветом на страничках Регистрация/Авторизация
+// Lato, regular, 12px, цвет черный
+.register-page__question-text {
+	font: {
+		family: $lato-font-family;
+		size: $mini-text;
+	}
+}
+
+// Стиль для подзаголовка розовым цветом на страничках Регистрация/Авторизация - кнопки для перехода на Регистрацию/Авторизацию
+// Lato, regular, 12px, цвет #FD4F79 розовый
+.register-page__switch-text {
+	@extend .register-page__question-text;
+	color: $btn-hover-color;
+	text-decoration: underline;
+}
+
+// Стиль для фильтра цены, который на странице "Каталог" - маленький серый текст с ценовым рядом
+// Lato, semi-bold, 10px, цвет #8E8D6F серый
+.filter-range-text {
+	font: {
+		family: $lato-font-family;
+		size: 10px;
+		weight: $semi-bold;
+	}
+	color: $menu-items-off-text-color;
+}
+
+// Стиль для перечёркнутой цены в маленьких карточках товаров, которые расположены на главной странице в разделе Скидки, на странице Каталог и на странице "Карточка товара" в разделе "Вместе покупают"
+// Monserrat, medium, 13px, цвет #8E8D6F серый, зачёркнутый
+
+.price-text_small_crossed {
+	font: {
+		weight: $medium;
+		size: 13px;
+	}
+	color: $crossed-out-price-text-color;
+	text-decoration: line-through;
+}
+
+// Стили для зелёной актуальной цены (крупная версия) на страничках "Карточка товара", "Корзина" и Личный кабинет раздел Просмотренные
+
+// Личный кабинет раздел Просмотренные
+// Lato, medium, 24 px, цвет #7EA048 зелёный
+.price-text_middle_green {
+	font: {
+		family: $lato-font-family;
+		weight: $medium;
+		size: $small-title-h3;
+	}
+	color: $price-and-sale-text-color;
+}
+
+// Страница "Корзина", там 2 разных стиля для актуальной цены
+// Lato, bold, 24px, цвет #7EA048 зелёный
+.price-text_bold_green {
+	@extend .price-text_middle_green;
+	font-weight: $bold;
+}
+
+// Lato, medium, 30px, цвет #7EA048 зелёный
+.price-text_big_green {
+	@extend .price-text_middle_green;
+	font-size: 30px;
+}
+
+// Страница "Карточка товара"
+// Montserrat, medium, 24px, цвет #7EA048 зелёный
+.price-text_m_medium_green {
+	font: {
+		weight: $medium;
+		size: $small-title-h3;
+	}
+	color: $price-and-sale-text-color;
+}
+
+// Стили для бейджиков на карточках товаров на главной странице в разделе Скидки, на странице Каталог и на странице Карточка товара в разделе Вместе покупают.
+// Стили для всех div бейджиков (маленьких)
+.badge-box_small {
+	width: 115px;
+	height: 25px;
+
+	font: {
+		weight: $medium;
+		size: $little-text;
+	}
+}
+// Стили только для трёх бейджиков (только маленьких): розовый, зелёный, оранжевый
+.white-text-badge_small {
+	border-radius: 0 6px 6px 0;
+	color: $white-text-color;
+	text-transform: uppercase;
+}
+
+// Стили отдельные для каждого из этих трёх бейджиков (и для маленьких, и для крупных):
+.hit-badge {
+	background-color: $hit-badge-color;
+}
+
+.new-badge {
+	background-color: $new-badge-color;
+}
+
+.today-bouquet {
+	background-color: $today-bouquet-color;
+}
+
+// Стиль отдельный для жёлтого бейджика (только маленького):
+.sale-badge_small {
+	background-color: $sale-badge-color;
+	border-radius: 6px 0 0 6px;
+	color: $price-and-sale-text-color;
+}
+
+// Стили для более крупных бейджиков на странице "Карточка товара", которые расположены вверху прямо справа от фотографии товара (они чуть-чуть крупнее и закругление у них не по всем углам)
+// Стили для всех div бейджиков (крупных)
+.badge-box_big {
+	width: 130px;
+	height: 30px;
+	border-radius: 6px;
+
+	font: {
+		weight: $medium;
+		size: $little-text;
+	}
+}
+
+// Стили только для трёх бейджиков (только больших): розовый, зелёный, оранжевый
+.white-text-badge_big {
+	color: $white-text-color;
+	text-transform: uppercase;
+}
+
+// Стиль отдельный для жёлтого бейджика (только большого):
+.sale-badge_big {
+	background-color: $sale-badge-color;
+	color: $price-and-sale-text-color;
+}
+
+/* Стили для розовых кнопок */
+
+// Стиль, который будет применим ко всем розовым кнопкам
+.pink-button {
+	font-family: $main-font-family;
+	background-color: $btn-general-color;
+	text-align: center;
+	border: none;
+	color: $white-text-color;
+
+	&:hover {
+		background-color: $btn-hover-color;
+	}
+
+	&:active {
+		background-color: $btn-active-click-color;
+	}
+}
+
+// Стиль, который будет применим только ко всем большим розовым кнопкам (Выбрать букет, Отправить, В корзину, Сохранить, Подтверждение заказа)
+.big-pink-button {
+	width: 275px;
+	height: 74px;
+	border-radius: 37px;
+	font: {
+		size: $small-title-h3;
+		weight: $bold;
+	}
+}
+
+// Стиль, который будет применим только ко всем маленьким розовым кнопкам (Заказать, Фильтровать, Зарегистрироваться, Войти)
+.small-pink-button {
+	height: 40px;
+	font: {
+		family: $lato-font-family;
+		weight: $semi-bold;
+	}
+}
+
+// Стиль только для кнопки В корзину
+.basket__button {
+	font-family: $lato-font-family;
+}
+
+// Стиль только для кнопок Сохранить и Подтверждение заказа
+.semibold__button {
+	font-weight: $semi-bold;
+}
+
+// Стиль только для кнопки Подтверждение заказа
+.approve-order__button {
+	width: 350px;
+}
+
+// Стиль только для кнопки Заказать
+.order__button {
+	width: 140px;
+	border-radius: 20px;
+	font-size: $regular-text-h4;
+}
+
+// Стиль только для кнопки Фильтровать
+.filter__button {
+	width: 110px;
+	height: 32px;
+	font-size: $mini-text;
+	border-radius: 20px;
+}
+
+// Стиль только для кнопок Зарегистрироваться и Войти
+.login__button {
+	width: 200px;
+	border-radius: 22px;
+	font-size: $small-text;
+}
+
+/* Стили для трёх форм: Предложи свой букет (Главная), Оформление заказа (Корзина), Появились вопросы (Контакты) */
+.common__form {
+	@extend %flex-column !optional;
+
+	input,
+	textarea {
+		width: 770px;
+		border: none;
+		background-color: $form-input-fields-back-color;
+		padding: 0px 45px;
+
+		&::placeholder,
+		&::-webkit-input-placeholder,
+		&:-moz-placeholder,
+		&::-moz-placeholder,
+		&:-ms-input-placeholder {
+			font: inherit;
+			color: $input-placeholder-text-color;
+			line-height: 90px;
+		}
+
+		&:focus {
+			outline: none;
+			border: 1px solid $input-focus-border;
+		}
+	}
+
+	input[type="text"] {
+		height: 90px;
+		border-radius: 45px;
+		margin-bottom: 1%;
+		line-height: 90px;
+	}
+
+	textarea {
+		height: 378px;
+		border-radius: 20px;
+		resize: none;
+		line-height: calc($middle-text-h3 + 0.3em);
+		padding: 25px 45px;
+
+		&::-webkit-scrollbar {
+			width: 4px;
+			border-radius: 100px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 100px;
+			background-color: #bdbdbd;
+		}
+
+		&::-webkit-scrollbar-track {
+			margin: 10px 0;
+			background-color: #e2d9d5;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* Стили для блока с каталогом, который используется в футере на каждой странице и на главной странице в двух разделах */
+/* Стили для контейнера с рамкой и заголовком блока */
+.footer .text-box,
+.catalog-preview .text-box {
+	position: absolute;
+	bottom: 0px;
+	background-color: rgba($white-background-color, 0.85);
+	@extend %flex-j-center-a-center !optional;
+
+	&__type-one {
+		width: 100%;
+		height: 27%;
+		border-radius: 10px 10px 0px 0px;
+		padding: 6px 4px;
+	}
+
+	&__inner-wrapper {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		@include w-100-h-100;
+
+		.text-frame {
+			@include w-100-h-100;
+		}
+
+		.text-wrapper {
+			position: absolute;
+			@extend %flex-j-center-a-center !optional;
+			@include w-100-h-100;
+			@include zero-position;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			color: $black-text-color;
+			text-decoration: none;
+		}
+		&:hover {
+			text-shadow: 0 0 1em rgb(118, 41, 182);
+		}
+	}
+}
+
+/* Продолжение: Стили для картинок внутри этих блоков */
+.footer .image-box,
+.catalog-preview .image-box {
+	display: flex;
+	width: 100%;
+	background: #000;
+	overflow: hidden;
+
+	.image {
+		@include object-fit;
+		opacity: 1;
+		transition: opacity 124ms linear, transform 124ms linear;
+		&:hover {
+			opacity: 0.65;
+			transform: scale(1.05);
+			cursor: pointer;
+		}
+	}
+}

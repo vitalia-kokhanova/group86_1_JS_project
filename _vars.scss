@@ -1,4 +1,4 @@
-@import "fonts";
+@import "_fonts";
 
 // Шрифты
 
@@ -8,6 +8,25 @@ $lato-font-family: "Lato", sans-serif;
 $sourcesanspro-font-family: "Source Sans Pro", sans-serif;
 $logo-big-text-font-family: "Gadugi-Bold", sans-serif;
 $logo-small-text-font-family: "Candara", sans-serif;
+
+// Размеры шрифтов (Desktop версия, 1440px - возможно тут поменяется, чтобы было адаптивно, но пока так)
+
+$big-title-h1: 64px;
+$secondary-big-title-h1: 58px;
+$middle-title-h2: 48px;
+$middle-text-h3: 36px;
+$small-title-h3: 24px;
+$regular-text-h4: 18px;
+$small-text: 16px;
+$little-text: 14px;
+$mini-text: 12px;
+$extra-mini-text: 11px;
+
+// Жирность шрифта
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
 
 // Цвета
 
@@ -41,7 +60,7 @@ $input-placeholder-text-color: #00000054;
 $card-background-color: #ffffff;
 $hit-badge-color: #fd4f79;
 $new-badge-color: #4ae950;
-$bouquet-of-the-day-badge-color: #fd984f;
+$today-bouquet-color: #fd984f;
 $sale-badge-color: #f1eb4c;
 
 // Цвета иконок, значков в хедере и футере
@@ -54,14 +73,7 @@ $contacts-icons-hover-color: #dd7059;
 $nav-icons-active-click-color: #ffab9a;
 $contacts-icons-active-click-color: #ffab9a;
 
-// Размеры шрифтов (Desktop версия, 1440px - возможно тут поменяется, чтобы было адаптивно, но пока так)
-
-$big-title-h1: 64px;
-$middle-title-h2: 48px;
-$small-title-h3: 24px;
-$mini-title-h4: 18px;
-$regular-text: 18px;
-$extra-mini-text:11px;
+$input-focus-border: rgb(243, 207, 134);
 
 // Радиокнопки
 // Составить повторяющиеся сочетания шрифт размер стиль жирность - миксины?
