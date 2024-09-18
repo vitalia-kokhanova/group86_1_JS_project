@@ -18,7 +18,7 @@
 	}
 
 	&__card-box {
-		width: 284px / 1170px * 100%;
+		width: calc(284px / 1170px * 100%);
 	}
 
 	&__image-wrapper {
@@ -39,7 +39,7 @@
 	.card-box__image-wrapper_small {
 		display: flex;
 		position: relative;
-		height: 245px / 427px * 100%;
+		height: calc(245px / 427px * 100%);
 
 		.card-box__image_small {
 			@include object-fit;
