@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const increaseBtn = document.getElementById('btnIncrease');
     const quantitySpan = document.getElementById('quantity');
     const totalPriceSpan = document.getElementById('total-price');
-    const addToCartButton = document.querySelector('.inCart');
+    const addToCartButton = document.getElementById('btnCart'); // Исправлено на ID кнопки "В корзину"
     const cartItemsList = document.getElementById('cart-items');
     const totalCostSpan = document.getElementById('total-cost');
 
     let quantity = 1;
-    const pricePerItem = 100; // Цена за единицу товара
+    const pricePerItem = parseFloat(addToCartButton.getAttribute('data-price')); // Цена за единицу товара
     let totalPrice = pricePerItem; // Итоговая цена
+
+    const cart = []; // Инициализация корзины
 
     function updatePrice() {
         totalPrice = quantity * pricePerItem;
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Обновляем общую стоимость
-        totalCost = cart.reduce((sum, item) => sum + item.price, 0);
+        const totalCost = cart.reduce((sum, item) => sum + item.price, 0);
         totalCostSpan.textContent = totalCost;
     }
 

@@ -1,12 +1,12 @@
 import "./card.scss";
-import "../../../catalog.json"
-import { quantity } from "./functionCard.js"
+import catalogData from "../../../catalog.json";
+import { quantity } from "./functionCard.js";
 
-export function renderMainCard(bouquet) {
+export function renderMainCard(bouquet, element) {
 const mainCard = `
     <div class="card-container">
         <div class="card">
-            <div class="card-img"<img src="${bouquet.image1.replace(/^require\(['"](.*)['"]\)$/, '$1')}" alt="${bouquet.name}"></div>
+            <div class="card-img"><img src="${bouquet.image1.replace(/^require\(['"](.*)['"]\)$/, '$1')}" alt="${bouquet.name}"></div>
             <div class="card-choice">
                 <button id="left"></button>
                 <div class="photo"><a href=""></a></div>
@@ -24,20 +24,20 @@ const mainCard = `
                 <p class="presence">Есть в наличии</p>
                 <div class="tags">
                     <h3>Повод:</h3>
-                    <p>${bouquet.occasion}</p>
+                    <p>${bouquet.occasion.join(', ')}</p>
                     <h3>Кому:</h3>
                     <p>Маме. Девушке. Женщине. Учителю. Тёще. Друзьям</p>
                 </div>
             </div>
             <div class="card-quantity">
-                div class="btn-quantity">
+                <div class="btn-quantity">
                     <button id="btnDecrease">-</button>
                     <span id="quantity">${quantity}</span>
                     <button id="btnIncrease">+</button>
                 </div>
                 <div class="card-price">
                     <span id="total-price">${bouquet.price}</span>
-                <button id="btnCart data-name="${bouquet.name}" data-price="${bouquet.price}*${quantity}">В корзину</button>
+                    <button id="btnCart" data-name="${bouquet.name}" data-price="${bouquet.price}">В корзину</button>
                 </div>
             </div>
             <div class="card-description">
@@ -46,19 +46,14 @@ const mainCard = `
             </div>
         </div>
     </div>
-    `;
-element.insertAdjacentHTML("beforeend", mainCard);
-	// Сохранение страницы в локальное хранилище или отправка на сервер
-	const fileName = `${bouquet.id}.html`;
-	localStorage.setItem(fileName, pageContent);
+  `;
+
+  element.insertAdjacentHTML("beforeend", mainCard);
 }
 
-  // Пример использования
-fetch('catalog.json')
-	.then(response => response.json())
-	.then(catalogData => {
-	catalogData.forEach(bouquet => {
-		generateBouquetPage(bouquet);
-	});
-	})
-	.catch(error => console.error('Ошибка загрузки данных:', error));
+// Пример использования
+const catalogContainer = document.getElementById('catalog-container');
+
+catalogData.forEach(bouquet => {
+    renderMainCard(bouquet, catalogContainer);
+});
