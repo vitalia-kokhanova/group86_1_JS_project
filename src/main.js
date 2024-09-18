@@ -10,6 +10,7 @@ import { renderCatalog } from "./pages/catalog/catalogPage.js";
 import { renderAuthTest } from "./pages/auth/renderAuthTestPage.js";
 import { registrPage } from "./pages/auth/registerPage.js";
 import { renderContacts } from "./pages/contacts/contactsPage.js";
+import { renderCard } from "./pages/card/card.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const path = window.location.pathname;
@@ -34,6 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			break;
 		case "/contacts":
 			renderContacts(appContainer);
+			break;
+		case "/card":
+			renderCard(appContainer);
 			break;
 	}
 });

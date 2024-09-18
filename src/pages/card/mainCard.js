@@ -46,14 +46,6 @@ const mainCard = `
             </div>
         </div>
     </div>
-  `;
-
-  element.insertAdjacentHTML("beforeend", mainCard);
+    `;
+	element.insertAdjacentHTML("beforeend", mainCard);
 }
-
-// Пример использования
-const catalogContainer = document.getElementById('catalog-container');
-
-catalogData.forEach(bouquet => {
-    renderMainCard(bouquet, catalogContainer);
-});

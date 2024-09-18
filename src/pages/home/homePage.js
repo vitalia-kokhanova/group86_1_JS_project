@@ -3,6 +3,7 @@ import { appContainer } from "../../vars.js";
 import { renderHeader } from "../../common/header.js";
 import { renderMainContainer } from "../../common/common.js";
 import { renderFirstScreen } from "../../common/firstScreen.js";
+import { renderTestSalesBlock } from "./testSalesBlock.js";
 import { renderSalesBlock } from "./salesBlock.js";
 import { renderWhyUs } from "./whyUs.js";
 import { renderCatalogPreview } from "./catalogPreview.js";
@@ -19,6 +20,7 @@ export function renderHome(element) {
 
 	renderFirstScreen(mainContainer);
 	renderSalesBlock(mainContainer);
+	renderTestSalesBlock(mainContainer);
 	renderWhyUs(mainContainer);
 	renderCatalogPreview(mainContainer);
 	renderDelivery(mainContainer);
