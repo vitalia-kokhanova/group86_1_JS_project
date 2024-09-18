@@ -13,6 +13,6 @@ export function renderCard(element) {
 
 	const mainContainer = document.querySelector(".main");
 
-	renderMainCard(mainContainer);
+	renderMainCard(bouquet);
 	renderFooter();
 }
