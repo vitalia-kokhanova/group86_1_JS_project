@@ -1,8 +1,7 @@
-import "./catalogPreview.scss";
 import "./card.scss";
 
 export function renderMainCard(element) {
-const mainCard = `
+	const mainCard = `
     <div class="card-container">
         <div class="card">
             <div class="card-img"><a href=""></a></div>
@@ -40,5 +39,5 @@ const mainCard = `
         </div>
     </div>
     `;
-element.insertAdjacentHTML("beforeend", mainCard);
+	element.insertAdjacentHTML("beforeend", mainCard);
 }

@@ -406,7 +406,7 @@ ul {
 }
 
 // Стиль для перечёркнутой цены в маленьких карточках товаров, которые расположены на главной странице в разделе Скидки, на странице Каталог и на странице "Карточка товара" в разделе "Вместе покупают"
-// Monserrat, medium, 13px, цвет #8E8D6F серый, зачёркнутый
+// Montserrat, medium, 13px, цвет #8E8D6F серый, зачёркнутый
 
 .price-text_small_crossed {
 	font: {
@@ -458,6 +458,7 @@ ul {
 .badge-box_small {
 	width: 115px;
 	height: 25px;
+	@extend %flex-j-center-a-center !optional;
 
 	font: {
 		weight: $medium;
@@ -497,6 +498,7 @@ ul {
 	width: 130px;
 	height: 30px;
 	border-radius: 6px;
+	@extend %flex-j-center-a-center !optional;
 
 	font: {
 		weight: $medium;
