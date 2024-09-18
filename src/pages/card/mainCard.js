@@ -1,4 +1,3 @@
-import "./catalogPreview.scss";
 import "./card.scss";
 
 export function renderMainCard(element) {
@@ -29,9 +28,15 @@ const mainCard = `
                 </div>
             </div>
             <div class="card-quantity">
-                <button id="btnQuantity"></button>
-                <div class="card-price"></div>
-                <button id="inBasket">В корзину</button>
+                div class="btn-quantity">
+                    <button id="btnDecrease">-</button>
+                    <span id="quantity">1</span>
+                    <button id="btnIncrease">+</button>
+                </div>
+                <div class="card-price">
+                    <span id="total-price"></span>
+                <button id="btnCart data-name="как-то должны брать из карточки" data-price="как-то длжны брать из тотал прайс">В корзину</button>
+                </div>
             </div>
             <div class="card-description">
                 <h3>Описание:</h3>
