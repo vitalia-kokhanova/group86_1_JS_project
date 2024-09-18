@@ -1,0 +1,10 @@
+// стили которые повторяются
+@mixin flexStyle{
+    display: flex;
+}
+@mixin btnStyles {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 4px;
+}
