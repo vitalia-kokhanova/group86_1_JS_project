@@ -1,6 +1,55 @@
 import "./_testSalesBlock.scss";
+import { Services } from "../../services/services";
+import { testSalesProductCard } from "./testSalesProductCard";
 
+export function renderTestSalesBlock() {
+	Services.getProducts().then((data) => {
+		setTimeout(() => {
+			renderTestingSales(data);
+		}, 1000);
+	});
+}
+
+function renderTestingSales(data) {
+	console.log(data);
+	const salesArray = data.slice(0, 4);
+	console.log(salesArray);
+	const template = `
+				<section class="sales">
+					<div class="sales__container container">
+						<h2 class="middle-title sales__title">Скидки</h2>
+						<h4 class="test-button-Vika"><a href="/card">Карточка товара - кнопка для Вики</a></h4>
+						<div class="sales__inner-wrapper">
+							${salesArray.map((item) => testSalesProductCard(item)).join("")}
+						</div>
+					</div>
+				</section>
+			`;
+	const firstScreen = document.querySelector(".first-screen");
+	firstScreen.insertAdjacentHTML("afterend", template);
+}
+
+/*
 export function renderTestSalesBlock(element) {
+	const template = `
+				<section class="sales">
+					<div class="sales__container container">
+						<h2 class="middle-title sales__title">Скидки</h2>
+						<h4 class="test-button-Vika"><a href="/card">Карточка товара - кнопка для Вики</a></h4>
+						<div class="sales__inner-wrapper">
+							{data.items.map((item) => testSalesProductCard(item))}
+						</div>
+					</div>
+				</section>
+			`;
+	element.insertAdjacentHTML("beforeend", template);
+}
+
+//Services.getProducts().then((data) => {
+//setTimeout(function (data) {
+// 	console.log(data.items);
+
+function testSalesBlock() {
 	const template = `
     <section class="sales">
 			<div class="sales__container container">
@@ -219,5 +268,5 @@ export function renderTestSalesBlock(element) {
 			</div>
 		</section>
         `;
-	element.insertAdjacentHTML("beforeend", template);
 }
+*/

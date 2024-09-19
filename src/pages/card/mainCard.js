@@ -1,12 +1,15 @@
-import "./card.scss";
-import catalogData from "../../../catalog.json";
-import { quantity } from "./functionCard.js";
+import "./_card.scss";
+//import catalogData from "../../../catalog.json";
+//import { quantity } from "./functionCard.js";
 
 export function renderMainCard(bouquet, element) {
-const mainCard = `
+	const mainCard = `
     <div class="card-container">
         <div class="card">
-            <div class="card-img"><img src="${bouquet.image1.replace(/^require\(['"](.*)['"]\)$/, '$1')}" alt="${bouquet.name}"></div>
+            <div class="card-img"><img src="${bouquet.image1.replace(
+				/^require\(['"](.*)['"]\)$/,
+				"$1"
+			)}" alt="${bouquet.name}"></div>
             <div class="card-choice">
                 <button id="left"></button>
                 <div class="photo"><a href=""></a></div>
@@ -24,7 +27,7 @@ const mainCard = `
                 <p class="presence">Есть в наличии</p>
                 <div class="tags">
                     <h3>Повод:</h3>
-                    <p>${bouquet.occasion.join(', ')}</p>
+                    <p>${bouquet.occasion.join(", ")}</p>
                     <h3>Кому:</h3>
                     <p>Маме. Девушке. Женщине. Учителю. Тёще. Друзьям</p>
                 </div>
@@ -37,12 +40,18 @@ const mainCard = `
                 </div>
                 <div class="card-price">
                     <span id="total-price">${bouquet.price}</span>
-                    <button id="btnCart" data-name="${bouquet.name}" data-price="${bouquet.price}">В корзину</button>
+                    <button id="btnCart" data-name="${
+						bouquet.name
+					}" data-price="${bouquet.price}">В корзину</button>
                 </div>
             </div>
             <div class="card-description">
                 <h3>Описание:</h3>
-                <p>${Array.isArray(bouquet.flowers) ? bouquet.flowers.join(', ') : bouquet.flowers}</p>
+                <p>${
+					Array.isArray(bouquet.flowers)
+						? bouquet.flowers.join(", ")
+						: bouquet.flowers
+				}</p>
             </div>
         </div>
     </div>

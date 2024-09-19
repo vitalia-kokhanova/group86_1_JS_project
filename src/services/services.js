@@ -1,4 +1,4 @@
-class Services {
+export class Services {
 	static async getProducts() {
 		try {
 			const resp = await fetch("http://localhost:3001/products");

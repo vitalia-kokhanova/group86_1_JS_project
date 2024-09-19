@@ -14,11 +14,7 @@ import { registrPage } from "./pages/auth/registerPage.js";
 import { renderContacts } from "./pages/contacts/contactsPage.js";
 import { renderCard } from "./pages/card/card.js";
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-
 	const path = window.location.pathname;
 	switch (path) {
 		case "/":
@@ -46,64 +42,52 @@ document.addEventListener("DOMContentLoaded", () => {
 			renderCard(appContainer);
 			break;
 	}
-
-})
-      
-
-
-  const path = window.location.pathname;
-  switch (path) {
-    case "/":
-      renderHome(appContainer);
-      break;
-    case "/basket":
-      renderBasket(appContainer);
-      break;
-    case "/profile":
-      renderProfile(appContainer);
-      break;
-    case "/catalog":
-      renderCatalog(appContainer);
-      break;
-    case "/auth":
-      renderAuthTest(appContainer);
-      break;
-    case "/auth/registration":
-      registrPage(appContainer);
-      break;
-  }
-
-
-;
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const formReg = document.forms.Reg;
-  const emailReg = document.getElementById('emailReg');
-  const nameReg = document.getElementById('nameReg');
-  const familiaReg = document.getElementById('familiaReg');
-  const passwordReg = document.getElementById('passwordReg');
-  formReg.addEventListener("submit", (event) => {
-      event.preventDefault();
-      validOut({
-          email: emailReg.value,
-          name: nameReg.value,
-          password: passwordReg.value
-      });
-      formReg.reset();
-  });
 });
-function vlaidateUrl(user) {
-  if (!user && window.location.pathname !== "/login") {
-    if (!user && window.location.pathname !== "/registration") {
-      window.location.pathname = "/login";
-      return;
-    }
-    return;
-  }
+
+const path = window.location.pathname;
+switch (path) {
+	case "/":
+		renderHome(appContainer);
+		break;
+	case "/basket":
+		renderBasket(appContainer);
+		break;
+	case "/profile":
+		renderProfile(appContainer);
+		break;
+	case "/catalog":
+		renderCatalog(appContainer);
+		break;
+	case "/auth":
+		renderAuthTest(appContainer);
+		break;
+	case "/auth/registration":
+		registrPage(appContainer);
+		break;
 }
 
-
-
+document.addEventListener("DOMContentLoaded", () => {
+	const formReg = document.forms.Reg;
+	const emailReg = document.getElementById("emailReg");
+	const nameReg = document.getElementById("nameReg");
+	const familiaReg = document.getElementById("familiaReg");
+	const passwordReg = document.getElementById("passwordReg");
+	formReg.addEventListener("submit", (event) => {
+		event.preventDefault();
+		validOut({
+			email: emailReg.value,
+			name: nameReg.value,
+			password: passwordReg.value,
+		});
+		formReg.reset();
+	});
+});
+function vlaidateUrl(user) {
+	if (!user && window.location.pathname !== "/login") {
+		if (!user && window.location.pathname !== "/registration") {
+			window.location.pathname = "/login";
+			return;
+		}
+		return;
+	}
+}

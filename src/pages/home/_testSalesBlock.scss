@@ -18,7 +18,7 @@
 	}
 
 	&__card-box {
-		width: 24%;
+		width: calc(284px / 1170px * 100%);
 	}
 
 	&__image-wrapper {
@@ -39,6 +39,8 @@
 	.card-box__image-wrapper_small {
 		display: flex;
 		position: relative;
+		height: calc(245px / 427px * 100%);
+
 		.card-box__image_small {
 			@include object-fit;
 			border-radius: 0 10px 0 0;
@@ -67,7 +69,7 @@
 		}
 
 		.sale-badge_small {
-			bottom: 10px;
+			bottom: 5px;
 			right: -5px;
 		}
 	}
