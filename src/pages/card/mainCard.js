@@ -1,10 +1,12 @@
 import "./card.scss";
+import catalogData from "../../../catalog.json";
+import { quantity } from "./functionCard.js";
 
-export function renderMainCard(element) {
-	const mainCard = `
+export function renderMainCard(bouquet, element) {
+const mainCard = `
     <div class="card-container">
         <div class="card">
-            <div class="card-img"><a href=""></a></div>
+            <div class="card-img"><img src="${bouquet.image1.replace(/^require\(['"](.*)['"]\)$/, '$1')}" alt="${bouquet.name}"></div>
             <div class="card-choice">
                 <button id="left"></button>
                 <div class="photo"><a href=""></a></div>
@@ -22,19 +24,25 @@ export function renderMainCard(element) {
                 <p class="presence">Есть в наличии</p>
                 <div class="tags">
                     <h3>Повод:</h3>
-                    <p>8 марта. 9 мая. Любовь</p>
+                    <p>${bouquet.occasion.join(', ')}</p>
                     <h3>Кому:</h3>
                     <p>Маме. Девушке. Женщине. Учителю. Тёще. Друзьям</p>
                 </div>
             </div>
             <div class="card-quantity">
-                <button id="btnQuantity"></button>
-                <div class="card-price"></div>
-                <button id="inBasket">В корзину</button>
+                <div class="btn-quantity">
+                    <button id="btnDecrease">-</button>
+                    <span id="quantity">${quantity}</span>
+                    <button id="btnIncrease">+</button>
+                </div>
+                <div class="card-price">
+                    <span id="total-price">${bouquet.price}</span>
+                    <button id="btnCart" data-name="${bouquet.name}" data-price="${bouquet.price}">В корзину</button>
+                </div>
             </div>
             <div class="card-description">
                 <h3>Описание:</h3>
-                <p> вставлю когда фигма откроется с компа</p>
+                <p>${Array.isArray(bouquet.flowers) ? bouquet.flowers.join(', ') : bouquet.flowers}</p>
             </div>
         </div>
     </div>
