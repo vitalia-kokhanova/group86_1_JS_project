@@ -35,6 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		case "/registration":
 			registrPage(appContainer);
 			break;
+		case "/auth/registration":
+			registrPage(appContainer);
+			break;
 		case "/contacts":
 			renderContacts(appContainer);
 			break;
@@ -43,28 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			break;
 	}
 });
-
-const path = window.location.pathname;
-switch (path) {
-	case "/":
-		renderHome(appContainer);
-		break;
-	case "/basket":
-		renderBasket(appContainer);
-		break;
-	case "/profile":
-		renderProfile(appContainer);
-		break;
-	case "/catalog":
-		renderCatalog(appContainer);
-		break;
-	case "/auth":
-		renderAuthTest(appContainer);
-		break;
-	case "/auth/registration":
-		registrPage(appContainer);
-		break;
-}
 
 document.addEventListener("DOMContentLoaded", () => {
 	const formReg = document.forms.Reg;

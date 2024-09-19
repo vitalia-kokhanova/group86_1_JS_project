@@ -20,7 +20,7 @@ function renderTestingSales(data) {
 						<h2 class="middle-title sales__title">Скидки</h2>
 						<h4 class="test-button-Vika"><a href="/card">Карточка товара - кнопка для Вики</a></h4>
 						<div class="sales__inner-wrapper">
-							${salesArray.map((item) => testSalesProductCard(item)).join("")}
+							${salesArray.map((item) => testSalesProductCard(item)).join()}
 						</div>
 					</div>
 				</section>
