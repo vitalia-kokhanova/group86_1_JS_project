@@ -19,8 +19,8 @@ export function renderHome(element) {
 	const mainContainer = document.querySelector(".main");
 
 	renderFirstScreen(mainContainer);
+	renderTestSalesBlock();
 	renderSalesBlock(mainContainer);
-	renderTestSalesBlock(mainContainer);
 	renderWhyUs(mainContainer);
 	renderCatalogPreview(mainContainer);
 	renderDelivery(mainContainer);
