@@ -32,7 +32,6 @@ export function validOut(obj){
   console.log(email)
   console.log(password)
   console.log(name)
-  
   }
  
  
