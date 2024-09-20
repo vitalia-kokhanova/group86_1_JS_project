@@ -13,6 +13,7 @@ import { renderAuthTest } from "./pages/auth/renderAuthTestPage.js";
 import { registrPage } from "./pages/auth/registerPage.js";
 import { renderContacts } from "./pages/contacts/contactsPage.js";
 import { renderCard } from "./pages/card/card.js";
+import { renderSpecificCard } from "./pages/home/renderSpecificCard.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const path = window.location.pathname;
@@ -43,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			break;
 		case "/card":
 			renderCard(appContainer);
+			break;
+		case "/specificCard":
+			renderSpecificCard(appContainer, data);
 			break;
 	}
 });
