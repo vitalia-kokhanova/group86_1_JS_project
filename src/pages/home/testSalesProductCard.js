@@ -14,6 +14,13 @@ export function testSalesProductCard(product) {
 		price,
 	} = product;
 	console.log(product);
+
+	function redirectToCardPage(path, data) {
+		let pathName = window.location.pathname;
+		pathName = path;
+		window.location.pathname = "/specificCard";
+	}
+
 	return `
     <div class="card-box_small sales__card-box">
 						<div
@@ -59,7 +66,7 @@ export function testSalesProductCard(product) {
 							</div>
 							<div class="card-box__button-wrapper_small">
 								<button
-									class="pink-button small-pink-button order__button card-box__button_small"
+									class="pink-button small-pink-button order__button card-box__button_small" onclick="redirectToCardPage()"
 								>
 									Заказать
 								</button>
