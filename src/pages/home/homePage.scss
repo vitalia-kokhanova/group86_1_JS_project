@@ -1,0 +1,193 @@
+@import 'vars';
+@import 'mixin';
+.header__content{
+    @include flexStyle;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: $main-background-color;
+    max-width: 100%;
+    z-index: 1000;
+}
+.header__burger-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+    #burgerImg {
+        width: 25px;
+        height: 25px;
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+        margin-left: 8.4rem; 
+        cursor: pointer;
+    }
+    .header__logo__container{
+        @include flexStyle;
+        justify-content: center;
+        align-items: center;
+        margin-left: 28rem;
+        margin-top: 0.86rem;
+    }
+    .header__logo__title{
+    font-family: $logo-big-text-font-family;
+    color: $logo-upper-text-color;
+    font-size: $small-title-h3;
+    font-style: normal;
+    }
+    .header__img{
+        max-width: 2.37em;
+        max-height:2.6em;
+        transform: rotate(23.7deg);
+    }
+    .header__subtitle{
+    color:$logo-lower-text-color;
+    font-size: $extra-mini-text;
+    }
+    .header__icon__images{
+        @include flexStyle;
+    }
+    .main__content{
+        background: url('/assets/images/image.png');
+        background-repeat: no-repeat;
+        background-color:$white-background-color;
+        background-position: center;
+        background-size: cover;
+        margin-top: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 120vh;
+    }
+    .main__title-container{
+        position: absolute;
+        left: 135px;
+        top: 85%;
+        right: 0;
+        bottom: 100px;
+        margin: auto;
+    }
+    .main__title{
+        color:$black-text-color;
+        font-family: $sourcesanspro-font-family;
+        font-size: $small-title-h3;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 0.43rem;
+    }
+    .main__sec__title{
+        color:$black-text-color;
+        font-family: $main-font-family;
+        font-size: $big-title-h1;
+        font-style: normal;
+        margin-bottom: 1.75rem;
+    }
+    #mainBtn{
+        background-color: $slider-dash-on-color;
+        color: $white-text-color;
+        cursor: pointer;
+        border-radius: 1.86em;
+        padding: 15px 20px;
+        font-style: normal;
+        font-size: $mini-title-h4;
+        font-weight: 700;
+        font-family: $main-font-family;
+        border: none;
+        outline: none;
+    }
+.main__container{
+background-color: $main-background-color;
+}
+.main__container__title{
+color:$black-text-color;
+font-family: $main-font-family;
+font-size: $small-title-h3;
+font-weight: 700;
+margin-left:5.4em;
+margin-top: 2.2em;
+}
+.main__container--cards{
+@include flexStyle;
+}
+.main__card{
+@include cardDesign;
+}
+.main__img{
+   @include imgDesign;
+}
+
+#mainsalesBtn{
+    @include btnStyles;
+    @include btntransform;
+}
+#newBtn{
+background-color: $new-badge-color;
+@include btnStyles;
+color: $white-text-color;
+border-radius: 6px 6px 0px
+}
+#buketBtn{
+    @include btnStyles;
+    color: $white-text-color;
+    background-color: $bouquet-of-the-day-badge-color;
+    border-radius:  6px 6px 0px;
+}
+// poga 50%
+.main__discount{
+    @include flexStyle;
+    background-color: $sale-badge-color;
+    @include btntransform;
+    color: $price-and-sale-text-color;
+}
+// №225 “Ромашки для Наташки”
+.main__title{
+margin: 9px;
+font-size: $new-medium-text;
+font-family: $main-font-family;
+font-weight: 500;
+color: $black-text-color;
+display: flex;
+justify-content: center;
+align-items: center;
+white-space: nowrap;
+margin-bottom: 0;
+}
+.main__second__title{
+@include textwrap;
+}
+.main__card-price{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+// 5400
+.main__first__price{
+    @include firstPrice;
+}
+// 3700 rub
+.main__second__price{
+@include secondPrice;
+}
+// btn zakazatj
+#addBtn{
+    background-color: $slider-dash-on-color;
+    border: none;
+    outline: none;
+    color: $white-text-color;
+    padding: 6px 20px;
+    border-radius: 2em;
+    cursor: pointer;  
+    align-self: center;
+    position: absolute;
+    margin-left: 110px;
+    top: 40px;
+    bottom: 2px;
+    right: 16px;
+}
+.main__second__card{
+    @include cardDesign;
+}
+.main__sec__img{
+    @include imgDesign;
+}
