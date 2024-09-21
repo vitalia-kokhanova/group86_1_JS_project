@@ -61,6 +61,12 @@
 		position: relative;
 	}
 
+	.catalog-block:hover .image {
+		opacity: 0.65;
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+
 	&__contacts-title {
 		margin-bottom: 7%;
 	}

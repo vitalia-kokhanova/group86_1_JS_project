@@ -38,7 +38,8 @@ $main-background-color: #fff0e4;
 /* (Этот белый цвет используется на первом экране сзади больших цветов, а так же в полях форм и на главной странице внизу.)*/
 $white-background-color: #fff8f5;
 $form-input-fields-back-color: #fff8f5;
-$card-color:#FDFDFD;
+$input-focus-border: #fae57e;
+$card-bg-color: #fdfdfd;
 
 // Цвета кнопок, слайдеров, надписей в розовом цвете
 $btn-general-color: #d7537a;
@@ -81,9 +82,9 @@ $middle-title-h2: 48px;
 $small-title-h3: 24px;
 $mini-title-h4: 18px;
 $regular-text: 18px;
-$extra-mini-text:11px;
-$new-medium-text:16px;
-$new-smallest-text:13px;
+$extra-mini-text: 11px;
+$new-medium-text: 16px;
+$new-smallest-text: 13px;
 
 // Радиокнопки
 // Составить повторяющиеся сочетания шрифт размер стиль жирность - миксины?

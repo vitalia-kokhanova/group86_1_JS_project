@@ -85,7 +85,7 @@
 #buketBtn {
 	@include btnStyles;
 	color: $white-text-color;
-	background-color: $bouquet-of-the-day-badge-color;
+	background-color: $today-bouquet-color;
 	border-radius: 6px 6px 0px;
 }
 // poga 50%

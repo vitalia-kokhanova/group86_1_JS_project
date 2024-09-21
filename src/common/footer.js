@@ -372,4 +372,11 @@ export function renderFooter() {
 		</footer>
     `;
 	appContainer.insertAdjacentHTML("beforeend", template);
+
+	const catalogBlocks = document.querySelectorAll(".catalog-block");
+	catalogBlocks.forEach(function (block) {
+		block.addEventListener("click", function () {
+			window.location.pathname = "/catalog";
+		});
+	});
 }
