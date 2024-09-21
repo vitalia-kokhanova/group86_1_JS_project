@@ -12,6 +12,7 @@ export function testSalesProductCard(product) {
 		packing,
 		occasion,
 		price,
+		discount,
 	} = product;
 	console.log(product);
 
@@ -58,10 +59,10 @@ export function testSalesProductCard(product) {
 						<div class="card-box__price-button-wrapper_small">
 							<div class="card-box__prices-wrapper_small">
 								<p class="price-text_small_crossed card-box__old-price_small">
-									${price}
+									${price} &#8381
 								</p>
 								<p class="price-text_small_green card-box__relevant-price_small">
-									${price}
+									${(price - price * (discount / 100)).toFixed(0)} &#8381;
 								</p>
 							</div>
 							<div class="card-box__button-wrapper_small">

@@ -39,7 +39,7 @@ export function renderHeader() {
 							alt="Значок корзины"
 							id="baksetImg"
 					/></a>
-					<a href="/auth"
+					<a href="/auth" class="profile-icon__link"
 						><img
 							src="./assets/icons/header_icons/profile_icon.png"
 							alt="Значок профиля"
@@ -52,7 +52,7 @@ export function renderHeader() {
     `;
 	appContainer.insertAdjacentHTML("afterbegin", template);
 }
- /*
+/*
  <!-- <header>
 			<div class="header__content">
 			<div class="header__burger-container">
