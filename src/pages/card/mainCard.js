@@ -1,12 +1,12 @@
 import "./card.scss";
-import catalogData from "../../../catalog.json";
+import catalogData from "../../../db.json";
 import { quantity } from "./functionCard.js";
 
 export function renderMainCard(bouquet, element) {
 const mainCard = `
     <div class="card-container">
         <div class="card">
-            <div class="card-img"><img src="${bouquet.image1.replace(/^require\(['"](.*)['"]\)$/, '$1')}" alt="${bouquet.name}"></div>
+            <div class="card-img"><img src="${bouquet.image1}" alt="${bouquet.name}"></div>
             <div class="card-choice">
                 <button id="left"></button>
                 <div class="photo"><a href=""></a></div>

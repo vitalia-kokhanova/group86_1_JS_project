@@ -19,7 +19,7 @@ export function renderCard(element, bouquet) {
 }
 
 // Пример использования
-import catalogData from "../../../catalog.json";
+import catalogData from "../../../db.json";
 
 const catalogContainer = document.getElementById('catalog-container');
 
