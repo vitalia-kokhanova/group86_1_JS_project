@@ -104,5 +104,88 @@ export function renderSalesBlock(element) {
 			</div>
 		</section>
         `;
+		`
+		
+		`
 	element.insertAdjacentHTML("beforeend", template);
 }
+
+/* `<div class="sales__block__content">
+			<div class="sales__block__container">
+			<h2 class="sales__block__title">Подарите ощущение праздника</h2>
+			<h1 class="sales_block__subtitle">Собираем букеты, <div> созданные для Вас</h1>
+			<button type="submit" id="salesBtn">Выбрать букет</button>
+			</div>
+		</div>
+		</div>
+		<div class="sales__block__second__container">
+			<h1 class="sales__block__title">Скидки</h1>
+			<div class="sales__container--cards">
+				<div class="sales__block__card">
+					<div class="sales__btn">ХИТ ПРОДАЖ</div>
+					<div class="sales__news__btn">НОВИНКА</div>
+					<div class="sales__bucket__btn">БУКЕТ ДНЯ</div>
+					<img src="./assets/images/Ромашки для наташки.png" alt="flowerImg" class="sales__sec__img">
+					<div class="sales__block__discount">
+						<div class="sales__block__first__price">Скидка 50%</div>
+					</div>
+					<h3 class="sales__block__title">№225 “Ромашки для Наташки”</h3>
+					<h3 class="sales__second__title">№225 “Ромашки для Наташки” </h3>
+					<div class="sales__block__card--price">
+						<div class="sales__first__price">5 400 руб</div>
+						<div class="sales__second__price">3 700 руб</div>
+						<button class="sales__add__btn">Заказать</button>
+					</div>
+				</div>
+				<div class="sales__second__card">
+					<div class="sales__second__card">
+						<div class="sales__sec__btn">ХИТ ПРОДАЖ</div>
+						<div class="sales__sec__news__button">НОВИНКА</div>
+						<div class="sales__sec__bucket__btn">БУКЕТ ДНЯ</div>
+						<img src="./assets/images/Ромашки для наташки.png" alt="secondFlower" class="sales__sec__img">
+							<div class="sales__second__discount">Скидка 50%</div>
+						<div class="sales__card__title">
+							<div class="sales__first__title">№225 “Ромашки для Наташки” </div>
+							<div class="sales__sec__title">№225 “Ромашки для Наташки” </div>
+						</div>
+						<div class="sales__second__prices">
+							<div class="sales__secondcard__firstprice">5 400 руб</div>
+							<div class="sales__secondcard__secondprice">3 700 руб </div>
+							<button class="sales__sec__add__btn">Заказать</button>
+						</div>
+					</div>
+				</div>
+				<div class="sales__third__card">
+					<div class="sales__third__btn">ХИТ ПРОДАЖ</div>
+					<div class="sales__news__button">НОВИНКА</div>
+					<div class="sales__third__bucket__btn">БУКЕТ ДНЯ</div>
+					<img src="./assets/images/Ромашки для наташки.png" alt="flowerThirdImg">
+					<div class="sales__block__thirdCard-discount">Скидка 50%</div>
+					<div class="sales__third__card__titles">
+						<div class="sales__third__first__title">№225 “Ромашки для Наташки” </div>
+						<div class="sales__third__sec__title">№225 “Ромашки для Наташки” </div>
+					</div>
+					<div class="sales__third__prices">
+						<div class="sales__first__price">5 400 руб</div>
+						<div class="sales__second__price">3 700 руб</div>
+						<button class="sales__third__add__btn">Заказать</button>
+					</div>
+				</div>
+				<div class="sales__block__fourth__card">
+					<div class="sales__fourth__btn">ХИТ ПРОДАЖ</div>
+					<div class="sales__fourth__news__btn">НОВИНКА</div>
+					<div class="sales__fourth__bucket__btn">БУКЕТ ДНЯ</div>
+<img src="./assets/images/Ромашки для наташки.png" alt="flowerImg">
+<div class="sales__fourth__discount">Скидка 50%</div>
+<div class="sales__fourth__titles">
+<div class="sales__fourth__card__first__title">№225 “Ромашки для Наташки” </div>
+<div class="sales__fourth__card__subtitle">№225 “Ромашки для Наташки” </div>
+</div>
+<div class="sales__fourth__card-prices">
+<div class="sales__fourth__first__price">5 400 руб</div>
+<div class="sales__fourth__second__price">3 700 руб</div>
+<button class="sales__third__add__btn">Заказать</button>
+</div>
+				</div>
+			</div>
+		</div>*/
