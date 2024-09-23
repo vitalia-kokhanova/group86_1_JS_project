@@ -257,7 +257,7 @@ export function renderFooter() {
 				<div class="footer__contacts-wrapper">
 					<div class="footer__contacts-container">
 						<h3 class="middle-small-title_semibold footer__contacts-title">
-							<a href="/contacts" class="contacts-page-link">Контакты:</a>
+							<a href="/contacts" class="contacts-page-link">Контакты</a>
 						</h3>
 						<div class="tel-box footer__tel-box">
 							<span class="tel-icon-wrapper"
