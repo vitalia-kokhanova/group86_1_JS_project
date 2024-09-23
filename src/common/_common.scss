@@ -23,9 +23,10 @@ body {
 .app__wrapper {
 	width: 100%;
 	min-height: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 /* Стили для ограничивающего контейнера */
@@ -49,11 +50,12 @@ ul {
 // Стиль для главного заголовка на главной
 // Montserrat, bold, 64px
 
-.main-page__main-title {
+.first-screen__main-title {
 	font: {
 		size: $big-title-h1;
 		weight: $bold;
 	}
+	letter-spacing: 2px;
 }
 
 // Стиль для главных заголовков на всех остальных страницах (Корзина, Каталог, Карточка товара, Контакты)
@@ -89,10 +91,11 @@ ul {
 // Стиль, который только 1 раз - для подзаголовка на главной
 // Source Sans Pro, regular, 24px
 
-.main-page__subtitle {
+.first-screen__subtitle {
 	font: {
 		family: $sourcesanspro-font-family;
 		size: $small-title-h3;
+		font-weight: $regular;
 	}
 }
 
@@ -536,6 +539,8 @@ ul {
 	&:active {
 		background-color: $btn-active-click-color;
 	}
+
+	cursor: pointer;
 }
 
 // Стиль, который будет применим только ко всем большим розовым кнопкам (Выбрать букет, Отправить, В корзину, Сохранить, Подтверждение заказа)
@@ -727,4 +732,23 @@ ul {
 			cursor: pointer;
 		}
 	}
+}
+
+/* Стили общие для логотипа в хедере и в футере (стили для шрифтов выше в разделе шрифтов) */
+.logo-container,
+.logo-box,
+.logo-titles-box {
+	display: flex;
+}
+
+.logo-titles-box {
+	flex-direction: column;
+}
+
+.logo-container {
+	align-items: center;
+}
+
+.logo-img {
+	width: 100%;
 }

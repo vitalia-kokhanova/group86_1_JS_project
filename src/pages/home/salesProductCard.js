@@ -1,4 +1,4 @@
-export function testSalesProductCard(product) {
+export function salesProductCard(product) {
 	const {
 		id,
 		category,

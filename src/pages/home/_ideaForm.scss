@@ -102,6 +102,15 @@
 		justify-content: space-between;
 	}
 
+	&__errors-block {
+		padding-bottom: 5%;
+	}
+
+	&__error-text {
+		color: $btn-general-color;
+		margin-bottom: 10px;
+	}
+
 	/* Стиль, который будет применим ко всем розовым кнопкам */
 	.pink-button {
 		font-family: $main-font-family;
