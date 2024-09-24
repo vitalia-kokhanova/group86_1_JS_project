@@ -5,10 +5,7 @@
 @import "/templates";
 
 .idea {
-	&__container {
-		@extend %flex-column !optional;
-	}
-
+	&__container,
 	&__container-wrapper {
 		@extend %flex-column !optional;
 	}
@@ -19,7 +16,6 @@
 
 	&__title {
 		align-self: center;
-		font-weight: $semi-bold;
 		margin-bottom: 5%;
 	}
 
@@ -37,67 +33,6 @@
 		}
 	}
 
-	.common__form {
-		@extend %flex-column !optional;
-
-		input,
-		textarea {
-			width: 770px;
-			border: none;
-			background-color: $form-input-fields-back-color;
-			padding: 0px 45px;
-
-			&::placeholder,
-			&::-webkit-input-placeholder,
-			&:-moz-placeholder,
-			&::-moz-placeholder,
-			&:-ms-input-placeholder {
-				font: inherit;
-				color: $input-placeholder-text-color;
-				line-height: 90px;
-			}
-
-			&:focus {
-				outline: none;
-				border: 1px solid $input-focus-border;
-			}
-		}
-
-		input[type="text"] {
-			height: 90px;
-			border-radius: 45px;
-			margin-bottom: 1%;
-			line-height: 90px;
-		}
-
-		textarea {
-			height: 378px;
-			border-radius: 20px;
-			resize: none;
-			line-height: calc($middle-text-h3 + 0.3em);
-			padding: 25px 45px;
-
-			&::-webkit-scrollbar {
-				width: 4px;
-				border-radius: 100px;
-			}
-
-			&::-webkit-scrollbar-thumb {
-				border-radius: 100px;
-				background-color: #bdbdbd;
-			}
-
-			&::-webkit-scrollbar-track {
-				margin: 10px 0;
-				background-color: #e2d9d5;
-			}
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
 	&__form {
 		justify-content: space-between;
 	}
@@ -109,79 +44,5 @@
 	&__error-text {
 		color: $btn-general-color;
 		margin-bottom: 10px;
-	}
-
-	/* Стиль, который будет применим ко всем розовым кнопкам */
-	.pink-button {
-		font-family: $main-font-family;
-		background-color: $btn-general-color;
-		text-align: center;
-		border: none;
-		color: $white-text-color;
-
-		&:hover {
-			background-color: $btn-hover-color;
-		}
-
-		&:active {
-			background-color: $btn-active-click-color;
-		}
-	}
-
-	/* Стиль, который будет применим только ко всем большим розовым кнопкам (Выбрать букет, Отправить, В корзину, Сохранить, Подтверждение заказа) */
-	.big-pink-button {
-		width: 275px;
-		height: 74px;
-		border-radius: 37px;
-		font: {
-			size: $small-title-h3;
-			weight: $bold;
-		}
-	}
-
-	/* Стиль, который будет применим только ко всем маленьким розовым кнопкам (Заказать, Фильтровать, Зарегистрироваться, Войти */
-	.small-pink-button {
-		height: 40px;
-		font: {
-			family: $lato-font-family;
-			weight: $semi-bold;
-		}
-	}
-
-	/* Стиль только для кнопки В корзину */
-	.basket__button {
-		font-family: $lato-font-family;
-	}
-
-	/* Стиль только для кнопок Сохранить и Подтверждение заказа */
-	.semibold__button {
-		font-weight: $semi-bold;
-	}
-
-	/* Стиль только для кнопки Подтверждение заказа */
-	.approve-order__button {
-		width: 350px;
-	}
-
-	/* Стиль только для кнопки Заказать */
-	.order__button {
-		width: 140px;
-		border-radius: 20px;
-		font-size: $regular-text-h4;
-	}
-
-	/* Стиль только для кнопки Фильтровать */
-	.filter__button {
-		width: 110px;
-		height: 32px;
-		font-size: $mini-text;
-		border-radius: 20px;
-	}
-
-	/* Стиль только для кнопок Зарегистрироваться и Войти */
-	.login__button {
-		width: 200px;
-		border-radius: 22px;
-		font-size: $small-text;
 	}
 }

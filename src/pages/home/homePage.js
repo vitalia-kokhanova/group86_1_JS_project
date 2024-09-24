@@ -17,6 +17,12 @@ export function renderHome(element) {
 	const mainContainer = document.querySelector(".main");
 
 	renderFirstScreen(mainContainer);
+	const innerWrapper = document.querySelector(".first-screen__inner-wraper");
+	innerWrapper.classList.remove(
+		"basket-page__inner-wrapper_position",
+		"contacts-page__inner-wrapper_position"
+	);
+
 	renderSalesBlock();
 	renderWhyUs(mainContainer);
 	renderCatalogPreview(mainContainer);

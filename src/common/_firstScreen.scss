@@ -26,8 +26,7 @@
 	}
 
 	&__inner-wraper {
-		margin-top: 33%;
-		margin-bottom: 7%;
+		margin: 33% 0 7% 0;
 	}
 
 	&__subtitle_position {
@@ -36,5 +35,20 @@
 
 	&__main-title_position {
 		margin-bottom: 2.5%;
+	}
+
+	.pagename-path-link {
+		text-decoration: none;
+
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			color: $menu-items-off-text-color;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
