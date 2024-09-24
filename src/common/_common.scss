@@ -705,7 +705,7 @@ ul {
 			text-decoration: none;
 		}
 		&:hover {
-			text-shadow: 0 0 1em rgb(118, 41, 182);
+			text-shadow: 0 0 1em $contacts-icons-hover-color;
 		}
 	}
 
