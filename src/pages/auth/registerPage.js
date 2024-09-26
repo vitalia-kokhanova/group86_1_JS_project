@@ -2,8 +2,7 @@ import "./_auth.scss";
 import { initializeApp } from "firebase/app";
 import {
 	getAuth,
-	createUserWithEmailAndPassword,
-	onAuthStateChanged,
+	createUserWithEmailAndPassword
 } from "firebase/auth";
 
 export const firebaseConfig = {
@@ -19,19 +18,9 @@ export const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-onAuthStateChanged(auth, (user) => {
-	vlaidateUrl(user);
-	const arr = window.location.pathname.split("/");
 
-	console.log(window.location.pathname);
-});
 
-export function validOut(obj) {
-	const { email, password, name } = obj;
-	console.log(email);
-	console.log(password);
-	console.log(name);
-}
+
 
 export function registrPage(element) {
 	element.innerHTML = `
@@ -79,34 +68,21 @@ export function registrPage(element) {
 			</form>
 		</div>
     `;
-	document.getElementById("btnSend").onclick = () => {
-		const formReg = document.forms.Reg;
-		const err = document.querySelector(".error");
-		const { email, password, lastName } = formReg;
+	const formReg = document.forms.Reg;
+  const err = document.querySelector(".error");
+  const { email, password, names} = formReg;
 
-		if (
-			email.value === "" ||
-			lastName.value === "" ||
-			password.value === ""
-		) {
-			err.innerHTML = "Заполните все поля";
-			err.classList.remove("none");
-			return;
-		}
-		if (password.value.length < 7) {
-			err.innerHTML = "Пароль должен быть не менее 7 символов";
-			err.classList.remove("none");
-			return;
-		}
+  formReg.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-		err.classList.add("none");
-		createUserWithEmailAndPassword(auth, email, password)
-			.then((UserActivate) => {
-				console.log(UserActivate);
+	createUserWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+				window.location.href = "/profile";
+				console.log(userCredential);
 			})
 			.catch((error) => {
 				err.innerHTML = "Пользователь с таким email уже существует";
 				err.classList.remove("none");
 			});
-	};
+})
 }

@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./firebase.js";
-//import { validOut } from "./pages/auth/registerPage.js";
+
 
 initializeApp(firebaseConfig);
 
@@ -8,12 +8,14 @@ import { appContainer } from "./vars.js";
 import { renderHome } from "./pages/home/homePage.js";
 import { renderBasket } from "./pages/basket/basketPage.js";
 import { renderProfile } from "./pages/profile/profilePage.js";
-import { renderCatalog } from "./pages/catalog/catalogPage.js";
+//import { renderCatalog } from "./pages/catalog/catalogPage.js";
 import { renderAuthTest } from "./pages/auth/renderAuthTestPage.js";
 import { registrPage } from "./pages/auth/registerPage.js";
 import { renderContacts } from "./pages/contacts/contactsPage.js";
 import { renderCard } from "./pages/card/card.js";
-import { renderSpecificCard } from "./pages/home/renderSpecificCard.js";
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	const path = window.location.pathname;
