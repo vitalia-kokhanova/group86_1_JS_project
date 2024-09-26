@@ -1,4 +1,4 @@
-//import { element } from"../../../vars";
+
 import { initializeApp } from "firebase/app";
 import {
 	signInWithEmailAndPassword,
@@ -6,7 +6,7 @@ import {
 	onAuthStateChanged,
 } from "firebase/auth";
 import "./_auth.scss";
-
+//import { validOut } from "./registerPage";
 export const firebaseConfig = {
 	apiKey: "AIzaSyBv33wcqlvshLdxukPHWCTXgvA2HBIhHzY",
 	authDomain: "project-js-9e6d9.firebaseapp.com",

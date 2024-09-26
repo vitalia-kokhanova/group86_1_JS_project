@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./firebase.js";
-import { validOut } from "./pages/auth/registerPage.js";
+//import { validOut } from "./pages/auth/registerPage.js";
 
 initializeApp(firebaseConfig);
 
@@ -50,29 +50,3 @@ document.addEventListener("DOMContentLoaded", () => {
 			break;
 	}
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-	const formReg = document.forms.Reg;
-	const emailReg = document.getElementById("emailReg");
-	const nameReg = document.getElementById("nameReg");
-	const familiaReg = document.getElementById("familiaReg");
-	const passwordReg = document.getElementById("passwordReg");
-	formReg.addEventListener("submit", (event) => {
-		event.preventDefault();
-		validOut({
-			email: emailReg.value,
-			name: nameReg.value,
-			password: passwordReg.value,
-		});
-		formReg.reset();
-	});
-});
-function vlaidateUrl(user) {
-	if (!user && window.location.pathname !== "/login") {
-		if (!user && window.location.pathname !== "/registration") {
-			window.location.pathname = "/login";
-			return;
-		}
-		return;
-	}
-}
