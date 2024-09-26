@@ -52,6 +52,7 @@ export function renderAuthTest(element) {
 						class="password"
 						type="password"
 						id="password"
+						minlength="8"
 						placeholder="password"
 						name="password"
 						required
