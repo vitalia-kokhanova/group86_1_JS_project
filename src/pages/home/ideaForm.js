@@ -3,7 +3,7 @@ import "./_ideaForm.scss";
 export function renderIdeaForm(element) {
 	const template = `
 		<section class="idea">
-			<div class="idea__container container">
+			<div class="container idea__container">
 				<div class="idea__container-wrapper">
 					<h2 class="middle-title_semibold idea__title">
 						Предложи свой букет
@@ -61,6 +61,22 @@ export function renderIdeaForm(element) {
 					>
 						Отправить
 					</button>
+				</div>
+			</div>
+			<div class="petals-wrapper petals-wrapper-4">
+				<div class="petal-wrapper petal-wrapper-10">
+					<img
+						src="./assets/images/bg_petals/petal10.png"
+						alt="Фоновый лепесток"
+						class="petal petal-10"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-11">
+					<img
+						src="./assets/images/bg_petals/petal11.png"
+						alt="Фоновый лепесток"
+						class="petal petal-11"
+					/>
 				</div>
 			</div>
 		</section>

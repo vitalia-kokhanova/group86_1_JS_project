@@ -5,6 +5,8 @@
 @import "/templates";
 
 .sales {
+	position: relative;
+
 	&__container {
 		@extend %flex-column !optional;
 	}
@@ -25,7 +27,8 @@
 		margin-bottom: 5%;
 	}
 
-	.card-box_small {
+	// Это можно перенести в common
+	.card-box-small {
 		@extend %flex-column !optional;
 		max-width: 284px;
 		max-height: 427px;
@@ -33,14 +36,14 @@
 		border-radius: 0 20px 20px 20px;
 		background-color: $card-bg-color;
 		z-index: 2;
-	}
 
-	.card-box__image-wrapper_small {
-		display: flex;
-		position: relative;
-		max-height: 245px;
+		&__image-wrapper {
+			display: flex;
+			position: relative;
+			max-height: 245px;
+		}
 
-		.card-box__image_small {
+		&__image {
 			@include object-fit;
 			border-radius: 0 10px 0 0;
 		}
@@ -71,26 +74,48 @@
 			bottom: 5px;
 			right: -5px;
 		}
+
+		&__title-wrapper {
+			height: 70px;
+			@extend %flex-justify-center !optional;
+		}
+
+		&__title {
+			width: 94%;
+		}
+
+		&__lower-wrapper {
+			@extend %flex-justify-around !optional;
+		}
+
+		&__prices-wrapper {
+			@extend %flex-column-center !optional;
+		}
 	}
 
-	.card-box__title-wrapper_small {
-		height: 70px;
-		@extend %flex-justify-center !optional;
-	}
-
-	.card-box__title_small {
-		width: 94%;
-	}
-
-	.card-box__price-button-wrapper_small {
-		@extend %flex-justify-around !optional;
-	}
-
-	.card-box__prices-wrapper_small {
-		@extend %flex-column-center !optional;
-	}
-
+	// Это убрать, когда всё доделаем
 	.test-button-Vika {
 		margin-bottom: 30px;
+	}
+
+	// Это можно перенести в common
+	.petals-wrapper {
+		position: absolute;
+		@include zero-position;
+		z-index: -100;
+		overflow: hidden;
+	}
+
+	.petals-wrapper-1 {
+		.petal-wrapper-1 {
+			position: absolute;
+			top: 5%;
+			left: -3%;
+		}
+		.petal-wrapper-2 {
+			position: absolute;
+			top: 70%;
+			right: -3%;
+		}
 	}
 }
