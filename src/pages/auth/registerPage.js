@@ -49,6 +49,7 @@ export function registrPage(element) {
 						id="nameReg"
 						placeholder="имя "
 						name="name"
+						minlength="3"
 					/>
 				</div>
 				<div>
@@ -56,6 +57,7 @@ export function registrPage(element) {
 						type="password"
 						id="passwordReg"
 						class="password"
+						minlength="8"
 						placeholder="password"
 						name="password"
 					/>
@@ -71,11 +73,12 @@ export function registrPage(element) {
 	const formReg = document.forms.Reg;
   const err = document.querySelector(".error");
   const { email, password, names} = formReg;
+ 
 
   formReg.addEventListener("submit", (e) => {
     e.preventDefault()
-
-	createUserWithEmailAndPassword(auth, email, password)
+	
+	createUserWithEmailAndPassword(auth, email.value, password.value)
 			.then((userCredential) => {
 				window.location.href = "/profile";
 				console.log(userCredential);
@@ -85,4 +88,5 @@ export function registrPage(element) {
 				err.classList.remove("none");
 			});
 })
+
 }
