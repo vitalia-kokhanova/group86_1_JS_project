@@ -1,7 +1,7 @@
-import "./_card.scss";
+//import "./card.scss";
 import { appContainer } from "../../vars.js";
 import { renderHeader } from "../../common/header.js";
-import { renderMainCard } from "./mainCard.js";
+//import { renderMainCard } from "./mainCard.js";
 import { renderMainContainer } from "../../common/common.js";
 import { renderFooter } from "../../common/footer.js";
 import "./functionCard.js";
@@ -19,12 +19,10 @@ export function renderCard(element, bouquet) {
 }
 
 // Пример использования
-/*
-import catalogData from "../../../catalog.json";
+//import catalogData from "../../../catalog.json";
 
 const catalogContainer = document.getElementById('catalog-container');
 
-catalogData.forEach(bouquet => {
+/*catalogData.forEach(bouquet => {
     renderCard(catalogContainer, bouquet);
-});
-*/
+});*/
