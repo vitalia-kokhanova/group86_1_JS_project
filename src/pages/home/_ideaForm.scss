@@ -5,6 +5,9 @@
 @import "/templates";
 
 .idea {
+	position: relative;
+	margin-bottom: 0;
+
 	&__container,
 	&__container-wrapper {
 		@extend %flex-column !optional;
@@ -44,5 +47,33 @@
 	&__error-text {
 		color: $btn-general-color;
 		margin-bottom: 10px;
+	}
+
+	&__button-wrapper {
+		margin-bottom: 5%;
+	}
+
+	.petals-wrapper {
+		position: absolute;
+		@include zero-position;
+		z-index: -100;
+		overflow: hidden;
+	}
+
+	.petals-wrapper-4 {
+		.petal-wrapper-10,
+		.petal-wrapper-11 {
+			position: absolute;
+		}
+
+		.petal-wrapper-10 {
+			top: 17%;
+			left: 30%;
+		}
+
+		.petal-wrapper-11 {
+			bottom: -7%;
+			left: 10%;
+		}
 	}
 }

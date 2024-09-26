@@ -34,6 +34,36 @@ export function renderWhyUs(element) {
 					</div>
 				</div>
 			</div>
+			<div class="petals-wrapper petals-wrapper-2">
+				<div class="petal-wrapper petal-wrapper-3">
+					<img
+						src="./assets/images/bg_petals/petal3.png"
+						alt="Фоновый лепесток"
+						class="petal petal-3"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-4">
+					<img
+						src="./assets/images/bg_petals/petal4.png"
+						alt="Фоновый лепесток"
+						class="petal petal-4"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-5">
+					<img
+						src="./assets/images/bg_petals/petal5.png"
+						alt="Фоновый лепесток"
+						class="petal petal-5"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-6">
+					<img
+						src="./assets/images/bg_petals/petal6.png"
+						alt="Фоновый лепесток"
+						class="petal petal-6"
+					/>
+				</div>
+			</div>
 		</section>
     `;
 	element.insertAdjacentHTML("beforeend", template);

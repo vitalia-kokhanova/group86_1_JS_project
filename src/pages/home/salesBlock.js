@@ -13,17 +13,70 @@ export function renderSalesBlock() {
 function renderSales(data) {
 	console.log(data);
 	const salesArray = data.slice(0, 4);
-	console.log(salesArray);
+
+	/*
+	const discountedProducts = data.filter((product) => product.discount > 0);
+	console.log(discountedProducts);
+
+	const productsByCategory = discountedProducts.reduce((grouped, product) => {
+		grouped[product.category] = grouped[product.category] || [];
+		grouped[product.category].push(product);
+		return grouped;
+	}, {});
+
+	const organizedProducts = [];
+	const categories = [
+		"Букет из цветов",
+		"Сладости",
+		"Мягкая игрушка",
+		"Воздушные шары",
+		"Фрукты",
+	];
+	let currentCategoryIndex = 0;
+
+	while (organizedProducts.length < discountedProducts.length) {
+		const category = categories[currentCategoryIndex];
+		const productsOfCategory = productsByCategory[category];
+		if (productsOfCategory && productsOfCategory.length) {
+			organizedProducts.push(productsOfCategory.shift());
+			currentCategoryIndex =
+				(currentCategoryIndex + 1) % categories.length;
+		}
+	}
+
+	const limitedOrganizedProducts = organizedProducts.slice(0, 12);
+
+	console.log(limitedOrganizedProducts);
+	*/
+
 	const template = `
-				<section class="sales">
-					<div class="sales__container container">
-						<h2 class="middle-title sales__title">Скидки</h2>
-						<h4 class="test-button-Vika"><a href="/card">Карточка товара - кнопка для Вики</a></h4>
-						<div class="sales__inner-wrapper">
-							${salesArray.map((item) => salesProductCard(item)).join("")}
-						</div>
-					</div>
-				</section>
+	<section class="sales">
+			<div class="sales__container container">
+				<h2 class="middle-title sales__title">Скидки</h2>
+				<h4 class="test-button-Vika">
+					<a href="/card">Карточка товара - кнопка для Вики</a>
+				</h4>
+				<div class="sales__inner-wrapper">
+					${salesArray.map((item) => salesProductCard(item)).join("")}
+				</div>
+			</div>
+			<div class="petals-wrapper petals-wrapper-1">
+				<div class="petal-wrapper petal-wrapper-1">
+					<img
+						src="./assets/images/bg_petals/petal1.png"
+						alt="Фоновый лепесток"
+						class="petal petal-1"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-2">
+					<img
+						src="./assets/images/bg_petals/petal2.png"
+						alt="Фоновый лепесток"
+						class="petal petal-2"
+					/>
+				</div>
+			</div>
+		</section>
 			`;
 	const firstScreen = document.querySelector(".first-screen");
 	firstScreen.insertAdjacentHTML("afterend", template);

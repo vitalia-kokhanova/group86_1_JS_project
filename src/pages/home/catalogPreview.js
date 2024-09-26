@@ -203,6 +203,29 @@ export function renderCatalogPreview(element) {
 					>
 				</div>
 			</div>
+			<div class="petals-wrapper petals-wrapper-3">
+				<div class="petal-wrapper petal-wrapper-7">
+					<img
+						src="./assets/images/bg_petals/petal7.png"
+						alt="Фоновый лепесток"
+						class="petal petal-7"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-8">
+					<img
+						src="./assets/images/bg_petals/petal8.png"
+						alt="Фоновый лепесток"
+						class="petal petal-8"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-9">
+					<img
+						src="./assets/images/bg_petals/petal9.png"
+						alt="Фоновый лепесток"
+						class="petal petal-9"
+					/>
+				</div>
+			</div>
 		</section>
 	`;
 	element.insertAdjacentHTML("beforeend", template);

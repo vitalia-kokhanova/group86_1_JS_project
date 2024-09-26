@@ -5,6 +5,8 @@
 @import "/mixins";
 
 .footer {
+	background-color: $white-background-color;
+
 	&__container,
 	&__catalog-wrapper,
 	&__contacts-container {
@@ -41,7 +43,7 @@
 	}
 
 	&__logo-wrapper {
-		margin-top: 1%;
+		margin-top: 3%;
 	}
 
 	&__logo-wrapper,
