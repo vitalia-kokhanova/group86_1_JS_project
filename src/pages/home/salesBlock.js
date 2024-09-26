@@ -14,6 +14,7 @@ function renderSales(data) {
 	console.log(data);
 	const salesArray = data.slice(0, 4);
 
+	/*
 	const discountedProducts = data.filter((product) => product.discount > 0);
 	console.log(discountedProducts);
 
@@ -46,7 +47,8 @@ function renderSales(data) {
 	const limitedOrganizedProducts = organizedProducts.slice(0, 12);
 
 	console.log(limitedOrganizedProducts);
-	/*
+	*/
+
 	const template = `
 	<section class="sales">
 			<div class="sales__container container">
@@ -78,7 +80,6 @@ function renderSales(data) {
 			`;
 	const firstScreen = document.querySelector(".first-screen");
 	firstScreen.insertAdjacentHTML("afterend", template);
-	*/
 }
 
 /* Старая версия, которую создала Карина и которую я чуть-чуть только в начале исправила */
