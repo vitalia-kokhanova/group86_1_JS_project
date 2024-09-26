@@ -38,6 +38,7 @@ $main-background-color: #fff0e4;
 /* (Этот белый цвет используется на первом экране сзади больших цветов, а так же в полях форм и на главной странице внизу.)*/
 $white-background-color: #fff8f5;
 $form-input-fields-back-color: #fff8f5;
+$input-focus-border: #fae57e;
 $card-bg-color: #fdfdfd;
 
 // Цвета кнопок, слайдеров, надписей в розовом цвете
@@ -74,9 +75,21 @@ $contacts-icons-hover-color: #dd7059;
 $nav-icons-active-click-color: #ffab9a;
 $contacts-icons-active-click-color: #ffab9a;
 
-$input-focus-border: rgb(243, 207, 134);
+// Размеры шрифтов (Desktop версия, 1440px - возможно тут поменяется, чтобы было адаптивно, но пока так)
+
+$big-title-h1: 64px;
+$middle-title-h2: 48px;
+$small-title-h3: 24px;
+$mini-title-h4: 18px;
+$regular-text: 18px;
+$extra-mini-text: 11px;
+$new-medium-text: 16px;
+$new-smallest-text: 13px;
 
 // Радиокнопки
 // Составить повторяющиеся сочетания шрифт размер стиль жирность - миксины?
 
-// Ширина
+// <<<<<<< HEAD
+// =======
+// // Ширина
+// >>>>>>> e9de285a6e4b39b725f50ef15173d484a682d9f8

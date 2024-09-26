@@ -3,3 +3,203 @@
 @import "./common";
 @import "/templates";
 @import "/mixins";
+
+.header {
+	display: flex;
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+	position: sticky;
+	top: 0;
+	z-index: 2000;
+	padding: 6px 0;
+	background-color: $main-background-color;
+
+	&__container,
+	&__nav-icons,
+	&__nav-box,
+	&__nav-list,
+	.basket-icon-wrapper {
+		display: flex;
+	}
+
+	&__container {
+		width: 100%;
+	}
+
+	&__container,
+	&__nav-list {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__burger-container,
+	&__nav-list-item,
+	.list-item-link,
+	.round-icon-wrapper,
+	.basket-icon-number {
+		@extend %flex-j-center-a-center !optional;
+	}
+
+	&__burger-container {
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		img {
+			@include object-fit;
+		}
+	}
+
+	&__logo-container {
+		&:hover {
+			cursor: pointer;
+		}
+		margin-left: 124px;
+	}
+
+	&__nav-icons {
+		width: 15%;
+	}
+
+	&__nav-box,
+	&__nav-list {
+		width: 100%;
+		height: 40px;
+	}
+
+	&__nav-list-item,
+	.list-item-link,
+	.basket-icon-wrapper {
+		height: 40px;
+		width: 46px;
+	}
+
+	.basket-icon-wrapper {
+		position: relative;
+	}
+
+	.cart-icon {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	.round-icon-wrapper {
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 0;
+		right: 3px;
+		z-index: 2;
+	}
+
+	.basket-icon-number {
+		color: $main-background-color;
+		font: {
+			size: 15px;
+			weight: $bold;
+			family: $lato-font-family;
+		}
+		position: absolute;
+		z-index: 3;
+	}
+
+	&__nav-list-item {
+		a svg:hover #searchIconPath,
+		a svg:hover #profileIconPath,
+		a svg:hover #roundIconPath,
+		a svg:hover #cartIconPath {
+			fill: $nav-icons-hover-color;
+		}
+
+		a svg:active #searchIconPath,
+		a svg:active #profileIconPath,
+		a svg:active #roundIconPath,
+		a svg:active #cartIconPath {
+			fill: $nav-icons-active-click-color;
+		}
+	}
+
+	.basket-icon-wrapper:hover {
+		a svg:hover #roundIconPath,
+		a svg:hover #cartIconPath {
+			fill: $nav-icons-hover-color;
+		}
+	}
+}
+
+/* Стили, которые делала Карина */
+/*
+.header__content {
+	@include flexStyle;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	background: $main-background-color;
+	max-width: 100%;
+	z-index: 1000;
+}
+
+#burgerImg {
+	width: 25px;
+	height: 25px;
+	margin-top: 1.4rem;
+	margin-bottom: 1.4rem;
+	margin-left: 8.4rem;
+	cursor: pointer;
+}
+.header__logo__container {
+	@include flexStyle;
+	justify-content: center;
+	align-items: center;
+	margin-left: 28rem;
+	margin-top: 0.86rem;
+}
+.header__logo__title {
+	font-family: $logo-big-text-font-family;
+	color: $logo-upper-text-color;
+	font-size: $small-title-h3;
+	font-style: normal;
+}
+.header__img {
+	max-width: 2.37em;
+	max-height: 2.6em;
+	transform: rotate(23.7deg);
+}
+.header__subtitle {
+	color: $logo-lower-text-color;
+	font-size: $extra-mini-text;
+}
+.header__icon__images {
+	@include flexStyle;
+}
+
+.header__burger-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.header__title-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 8.43rem;
+}
+.header__title {
+	color: $black-text-color;
+	font-family: $sourcesanspro-font-family;
+	font-size: $small-title-h3;
+	font-weight: 400;
+	font-style: normal;
+	margin-bottom: 0.43rem;
+}
+.header__main__title {
+	color: $black-text-color;
+	font-family: $main-font-family;
+	font-size: $big-title-h1;
+	font-style: normal;
+	margin-bottom: 1.75rem;
+}
+*/

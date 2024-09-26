@@ -13,12 +13,9 @@ import { renderAuthTest } from "./pages/auth/renderAuthTestPage.js";
 import { registrPage } from "./pages/auth/registerPage.js";
 import { renderContacts } from "./pages/contacts/contactsPage.js";
 import { renderCard } from "./pages/card/card.js";
-
-
-
+import { renderSpecificCard } from "./pages/home/renderSpecificCard.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-
 	const path = window.location.pathname;
 	switch (path) {
 		case "/":
@@ -42,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		case "/auth/registration":
 			registrPage(appContainer);
 			break;
-		
 		case "/contacts":
 			renderContacts(appContainer);
 			break;
@@ -54,4 +50,3 @@ document.addEventListener("DOMContentLoaded", () => {
 			break;
 	}
 });
-
