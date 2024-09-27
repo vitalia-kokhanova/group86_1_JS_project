@@ -1,5 +1,89 @@
 import "./_salesBlock.scss";
+import { Services } from "../../services/services";
+import { salesProductCard } from "./salesProductCard";
 
+export function renderSalesBlock() {
+	Services.getProducts().then((data) => {
+		setTimeout(() => {
+			renderSales(data);
+		}, 1000);
+	});
+}
+
+function renderSales(data) {
+	console.log(data);
+	const salesArray = data.slice(0, 4);
+
+	/*
+	const discountedProducts = data.filter((product) => product.discount > 0);
+	console.log(discountedProducts);
+
+	const productsByCategory = discountedProducts.reduce((grouped, product) => {
+		grouped[product.category] = grouped[product.category] || [];
+		grouped[product.category].push(product);
+		return grouped;
+	}, {});
+
+	const organizedProducts = [];
+	const categories = [
+		"Букет из цветов",
+		"Сладости",
+		"Мягкая игрушка",
+		"Воздушные шары",
+		"Фрукты",
+	];
+	let currentCategoryIndex = 0;
+
+	while (organizedProducts.length < discountedProducts.length) {
+		const category = categories[currentCategoryIndex];
+		const productsOfCategory = productsByCategory[category];
+		if (productsOfCategory && productsOfCategory.length) {
+			organizedProducts.push(productsOfCategory.shift());
+			currentCategoryIndex =
+				(currentCategoryIndex + 1) % categories.length;
+		}
+	}
+
+	const limitedOrganizedProducts = organizedProducts.slice(0, 12);
+
+	console.log(limitedOrganizedProducts);
+	*/
+
+	const template = `
+	<section class="sales">
+			<div class="sales__container container">
+				<h2 class="middle-title sales__title">Скидки</h2>
+				<h4 class="test-button-Vika">
+					<a href="/card">Карточка товара - кнопка для Вики</a>
+				</h4>
+				<div class="sales__inner-wrapper">
+					${salesArray.map((item) => salesProductCard(item)).join("")}
+				</div>
+			</div>
+			<div class="petals-wrapper petals-wrapper-1">
+				<div class="petal-wrapper petal-wrapper-1">
+					<img
+						src="./assets/images/bg_petals/petal1.png"
+						alt="Фоновый лепесток"
+						class="petal petal-1"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-2">
+					<img
+						src="./assets/images/bg_petals/petal2.png"
+						alt="Фоновый лепесток"
+						class="petal petal-2"
+					/>
+				</div>
+			</div>
+		</section>
+			`;
+	const firstScreen = document.querySelector(".first-screen");
+	firstScreen.insertAdjacentHTML("afterend", template);
+}
+
+/* Старая версия, которую создала Карина и которую я чуть-чуть только в начале исправила */
+/*
 export function renderSalesBlock(element) {
 	const template = `
     <section class="sales">
@@ -104,12 +188,14 @@ export function renderSalesBlock(element) {
 			</div>
 		</section>
         `;
-		`
+	`
 		
-		`
+		`;
 	element.insertAdjacentHTML("beforeend", template);
 }
+*/
 
+/* Структура для блока Скидки, которую сделала Карина, переделала */
 /* `<div class="sales__block__content">
 			<div class="sales__block__container">
 			<h2 class="sales__block__title">Подарите ощущение праздника</h2>
@@ -189,3 +275,246 @@ export function renderSalesBlock(element) {
 				</div>
 			</div>
 		</div>*/
+
+/* Мои закомментированные структуры и функции */
+/*
+export function renderTestSalesBlock(element) {
+	const template = `
+				<section class="sales">
+					<div class="sales__container container">
+						<h2 class="middle-title sales__title">Скидки</h2>
+						<h4 class="test-button-Vika"><a href="/card">Карточка товара - кнопка для Вики</a></h4>
+						<div class="sales__inner-wrapper">
+							{data.items.map((item) => testSalesProductCard(item))}
+						</div>
+					</div>
+				</section>
+			`;
+	element.insertAdjacentHTML("beforeend", template);
+}
+
+//Services.getProducts().then((data) => {
+//setTimeout(function (data) {
+// 	console.log(data.items);
+
+function testSalesBlock() {
+	const template = `
+    <section class="sales">
+			<div class="sales__container container">
+				<h2 class="middle-title sales__title">Скидки</h2>
+				<h4 class="test-button-Vika"><a href="/card">Карточка товара - кнопка для Вики</a></h4>
+				<div class="sales__inner-wrapper">
+					<div class="card-box_small sales__card-box">
+						<div
+							class="card-box__image-wrapper_small sales__image-wrapper"
+						>
+							<div
+								class="badge-box_small white-text-badge_small hit-badge"
+							>
+								ХИТ ПРОДАЖ
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small new-badge"
+							>
+								НОВИНКА
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small today-bouquet"
+							>
+								БУКЕТ ДНЯ
+							</div>
+							<div class="badge-box_small sale-badge_small">
+								Скидка 50%
+							</div>
+							<img
+								src="./assets/images/example_pic.png"
+								alt="Фото товара"
+								class="card-box__image_small"
+							/>
+						</div>
+						<div class="card-box__title-wrapper_small sales__title-wrapper">
+							<p class="card-box__title_small small-title_medium">
+								№225 “Ромашки для Наташки” №225 “Ромашки для
+								Наташки”
+							</p>
+						</div>
+						<div class="card-box__price-button-wrapper_small">
+							<div class="card-box__prices-wrapper_small">
+								<p class="price-text_small_crossed card-box__old-price_small">
+									5 400 руб
+								</p>
+								<p class="price-text_small_green card-box__relevant-price_small">
+									3 700 руб
+								</p>
+							</div>
+							<div class="card-box__button-wrapper_small">
+								<button
+									class="pink-button small-pink-button order__button card-box__button_small"
+								>
+									Заказать
+								</button>
+							</div>
+						</div>
+					</div>
+                    <div class="card-box_small sales__card-box">
+						<div
+							class="card-box__image-wrapper_small sales__image-wrapper"
+						>
+							<div
+								class="badge-box_small white-text-badge_small hit-badge"
+							>
+								ХИТ ПРОДАЖ
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small new-badge"
+							>
+								НОВИНКА
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small today-bouquet"
+							>
+								БУКЕТ ДНЯ
+							</div>
+							<div class="badge-box_small sale-badge_small">
+								Скидка 50%
+							</div>
+							<img
+								src="./assets/images/example_pic.png"
+								alt="Фото товара"
+								class="card-box__image_small"
+							/>
+						</div>
+						<div class="card-box__title-wrapper_small sales__title-wrapper">
+							<p class="card-box__title_small small-title_medium">
+								№225 “Ромашки для Наташки” №225 “Ромашки для
+								Наташки”
+							</p>
+						</div>
+						<div class="card-box__price-button-wrapper_small">
+							<div class="card-box__prices-wrapper_small">
+								<p class="price-text_small_crossed card-box__old-price_small">
+									5 400 руб
+								</p>
+								<p class="price-text_small_green card-box__relevant-price_small">
+									3 700 руб
+								</p>
+							</div>
+							<div class="card-box__button-wrapper_small">
+								<button
+									class="pink-button small-pink-button order__button card-box__button_small"
+								>
+									Заказать
+								</button>
+							</div>
+						</div>
+					</div>
+                    <div class="card-box_small sales__card-box">
+						<div
+							class="card-box__image-wrapper_small sales__image-wrapper"
+						>
+							<div
+								class="badge-box_small white-text-badge_small hit-badge"
+							>
+								ХИТ ПРОДАЖ
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small new-badge"
+							>
+								НОВИНКА
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small today-bouquet"
+							>
+								БУКЕТ ДНЯ
+							</div>
+							<div class="badge-box_small sale-badge_small">
+								Скидка 50%
+							</div>
+							<img
+								src="./assets/images/example_pic.png"
+								alt="Фото товара"
+								class="card-box__image_small"
+							/>
+						</div>
+						<div class="card-box__title-wrapper_small sales__title-wrapper">
+							<p class="card-box__title_small small-title_medium">
+								№225 “Ромашки для Наташки” №225 “Ромашки для
+								Наташки”
+							</p>
+						</div>
+						<div class="card-box__price-button-wrapper_small">
+							<div class="card-box__prices-wrapper_small">
+								<p class="price-text_small_crossed card-box__old-price_small">
+									5 400 руб
+								</p>
+								<p class="price-text_small_green card-box__relevant-price_small">
+									3 700 руб
+								</p>
+							</div>
+							<div class="card-box__button-wrapper_small">
+								<button
+									class="pink-button small-pink-button order__button card-box__button_small"
+								>
+									Заказать
+								</button>
+							</div>
+						</div>
+					</div>
+                    <div class="card-box_small sales__card-box">
+						<div
+							class="card-box__image-wrapper_small sales__image-wrapper"
+						>
+							<div
+								class="badge-box_small white-text-badge_small hit-badge"
+							>
+								ХИТ ПРОДАЖ
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small new-badge"
+							>
+								НОВИНКА
+							</div>
+							<div
+								class="badge-box_small white-text-badge_small today-bouquet"
+							>
+								БУКЕТ ДНЯ
+							</div>
+							<div class="badge-box_small sale-badge_small">
+								Скидка 50%
+							</div>
+							<img
+								src="./assets/images/example_pic.png"
+								alt="Фото товара"
+								class="card-box__image_small"
+							/>
+						</div>
+						<div class="card-box__title-wrapper_small sales__title-wrapper">
+							<p class="card-box__title_small small-title_medium">
+								№225 “Ромашки для Наташки” №225 “Ромашки для
+								Наташки”
+							</p>
+						</div>
+						<div class="card-box__price-button-wrapper_small">
+							<div class="card-box__prices-wrapper_small">
+								<p class="price-text_small_crossed card-box__old-price_small">
+									5 400 руб
+								</p>
+								<p class="price-text_small_green card-box__relevant-price_small">
+									3 700 руб
+								</p>
+							</div>
+							<div class="card-box__button-wrapper_small">
+								<button
+									class="pink-button small-pink-button order__button card-box__button_small"
+								>
+									Заказать
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        `;
+}
+*/

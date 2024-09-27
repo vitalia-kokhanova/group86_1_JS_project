@@ -5,6 +5,8 @@
 @import "/templates";
 
 .whyus {
+	position: relative;
+
 	&__container {
 		@extend %flex-column !optional;
 
@@ -69,5 +71,41 @@
 
 	p {
 		line-height: 120%;
+	}
+
+	.petals-wrapper {
+		position: absolute;
+		@include zero-position;
+		z-index: -100;
+		overflow: hidden;
+	}
+
+	.petals-wrapper-2 {
+		.petal-wrapper-3,
+		.petal-wrapper-4,
+		.petal-wrapper-5,
+		.petal-wrapper-6 {
+			position: absolute;
+		}
+
+		.petal-wrapper-3 {
+			top: 8%;
+			left: 35%;
+		}
+
+		.petal-wrapper-4 {
+			top: 32%;
+			left: 3%;
+		}
+
+		.petal-wrapper-5 {
+			top: 56%;
+			right: 10%;
+		}
+
+		.petal-wrapper-6 {
+			top: 76%;
+			left: 25%;
+		}
 	}
 }

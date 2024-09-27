@@ -3,3 +3,52 @@
 @import "./common";
 @import "/templates";
 @import "/mixins";
+
+.first-screen {
+	display: flex;
+	background-color: $white-background-color;
+	height: fit-content;
+	position: relative;
+
+	&__bg-wrapper {
+		display: flex;
+		width: 100%;
+		position: absolute;
+		z-index: 0;
+		img {
+			@include object-fit;
+		}
+	}
+
+	&__container {
+		z-index: 1;
+		width: 100%;
+	}
+
+	&__inner-wraper {
+		margin: 33% 0 7% 0;
+	}
+
+	&__subtitle_position {
+		margin-bottom: 1%;
+	}
+
+	&__main-title_position {
+		margin-bottom: 2.5%;
+	}
+
+	.pagename-path-link {
+		text-decoration: none;
+
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			color: $menu-items-off-text-color;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

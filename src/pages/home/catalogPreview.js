@@ -9,7 +9,7 @@ export function renderCatalogPreview(element) {
 				</h2>
 				<div class="catalog-preview__inner-wrapper">
 					<div class="inner-box side-box box-left">
-						<div class="block block-type-one block-1">
+						<div class="block block-type-one block-1 cp-for-whom-block">
 							<div class="image-box image-box__type-one">
 								<img
 									src="./assets/images/home_page_img/catalog_preview_1.png"
@@ -203,7 +203,44 @@ export function renderCatalogPreview(element) {
 					>
 				</div>
 			</div>
+			<div class="petals-wrapper petals-wrapper-3">
+				<div class="petal-wrapper petal-wrapper-7">
+					<img
+						src="./assets/images/bg_petals/petal7.png"
+						alt="Фоновый лепесток"
+						class="petal petal-7"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-8">
+					<img
+						src="./assets/images/bg_petals/petal8.png"
+						alt="Фоновый лепесток"
+						class="petal petal-8"
+					/>
+				</div>
+				<div class="petal-wrapper petal-wrapper-9">
+					<img
+						src="./assets/images/bg_petals/petal9.png"
+						alt="Фоновый лепесток"
+						class="petal petal-9"
+					/>
+				</div>
+			</div>
 		</section>
 	`;
 	element.insertAdjacentHTML("beforeend", template);
+
+	/*
+	const forWhomBlock = document.querySelector(".cp-for-whom-block");
+	forWhomBlock.addEventListener("click", function () {
+		window.location.pathname = "/catalog";
+	});
+	*/
+
+	const blocks = document.querySelectorAll(".block");
+	blocks.forEach(function (block) {
+		block.addEventListener("click", function () {
+			window.location.pathname = "/catalog";
+		});
+	});
 }

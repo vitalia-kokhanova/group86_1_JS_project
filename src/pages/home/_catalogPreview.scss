@@ -5,6 +5,9 @@
 @import "/templates";
 
 .catalog-preview {
+	position: relative;
+	margin-bottom: 0;
+
 	&__container {
 		@extend %flex-column !optional;
 
@@ -39,6 +42,12 @@
 			display: flex;
 		}
 
+		.block:hover .image {
+			opacity: 0.65;
+			transform: scale(1.05);
+			cursor: pointer;
+		}
+
 		.block-1,
 		.block-6 {
 			margin-bottom: 7%;
@@ -66,6 +75,7 @@
 	&__link-wrapper {
 		@extend %flex-justify-center !optional;
 		padding: 20px 0px;
+		margin-bottom: 5%;
 
 		.link {
 			color: $menu-items-off-text-color;
@@ -73,6 +83,36 @@
 			&:hover {
 				text-shadow: 0 0 15px #8e8d6f;
 			}
+		}
+	}
+
+	.petals-wrapper {
+		position: absolute;
+		@include zero-position;
+		z-index: -100;
+		overflow: hidden;
+	}
+
+	.petals-wrapper-3 {
+		.petal-wrapper-7,
+		.petal-wrapper-8,
+		.petal-wrapper-9 {
+			position: absolute;
+		}
+
+		.petal-wrapper-7 {
+			top: 5%;
+			right: 30%;
+		}
+
+		.petal-wrapper-8 {
+			top: 36%;
+			left: -3%;
+		}
+
+		.petal-wrapper-9 {
+			top: 90%;
+			left: 30%;
 		}
 	}
 }

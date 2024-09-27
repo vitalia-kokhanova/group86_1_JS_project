@@ -3,3 +3,44 @@
 @import "/src/common/common";
 @import "/mixins";
 @import "/templates";
+@import "/src/common/common";
+
+// Специальные классы для блока "First Screen", которые должны отработать для этого же блока, но на странице "Контакты" (а не на Главной) (см. contactsPage.js)
+.contacts-page__inner-wrapper_position {
+	margin: 40% 0 1% 0;
+}
+
+.contacts-page__main-title {
+	margin-bottom: 15%;
+}
+
+// Стили для блока "Map Block"
+// Стили для иконок социальных сетей находятся в файле "_footer.scss" (папка common), также html-структура для них в файле footer.js (та же папка).
+
+.map-block {
+	&__container {
+		width: 100%;
+		display: flex;
+		border-radius: 20px;
+		background-color: $white-background-color;
+	}
+
+	&__contacts-wrapper {
+		@extend %flex-column !optional;
+	}
+}
+
+// Стили для блока с формой "Questions" ("Появились вопросы?")
+// Здесь должны быть только конкретные, подправленные стили, для этого блока на страничке "Контакты". Общие стили для формы записаны в файле "_common.scss" внутри класса ".common__form". Стили для кнопки там же. Касаемо самой формы подсмотри в файлы ideaForm.js, _ideaForm.scss (папка pages > home > ...)
+
+.questions {
+	&__container {
+		width: 100%;
+		@extend %flex-justify-center !optional;
+	}
+
+	&__inner-wrapper {
+		width: 770px;
+		@extend %flex-column !optional;
+	}
+}

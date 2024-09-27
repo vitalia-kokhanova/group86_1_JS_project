@@ -1,9 +1,9 @@
-//import { element } from"../../../vars";
+
 import { initializeApp } from "firebase/app";
 import {
 	signInWithEmailAndPassword,
-	getAuth,
-	onAuthStateChanged,
+	getAuth
+	
 } from "firebase/auth";
 import "./_auth.scss";
 
@@ -52,6 +52,7 @@ export function renderAuthTest(element) {
 						class="password"
 						type="password"
 						id="password"
+						minlength="8"
 						placeholder="password"
 						name="password"
 						required
@@ -64,25 +65,26 @@ export function renderAuthTest(element) {
 			</form>
 		</div>
     `;
+	const formLogin = document.forms.login;
+	const err = document.querySelector(".err");
+	const { email, password } = formLogin;
+  
+	formLogin.addEventListener("submit", (e) => {
+	  e.preventDefault();
+	  if (email.value == "" || password.value == "") {
+		err.classList.remove("none");
+		err.textContent = "Заполните все поля";
+		return;
+	  }
+	 
+	  signInWithEmailAndPassword(auth, email.value, password.value)
+		.then(() => {
+		  window.location.href = "/profile";
+		})
+		.catch((errText) => {
+			err.textContent = "Не верный логин или пароль";
 
-	signInWithEmailAndPassword(auth, email.value, password.value).then(() => {
-		window.location.pathname = "/profile";
+		 
+		});
 	});
-
-	document.getElementById("login-btn").onclick = () => {
-		const email = document.getElementById("email").value;
-		const password = document.getElementById("password").value;
-
-		if (!email) {
-			document.getElementById("message").innerText =
-				"Пожалуйста, введите email.";
-			return;
-		}
-
-		if (!password) {
-			document.getElementById("message").innerText =
-				"Пожалуйста, введите пароль.";
-			return;
-		}
-	};
 }

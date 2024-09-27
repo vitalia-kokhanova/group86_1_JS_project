@@ -5,6 +5,8 @@
 @import "/mixins";
 
 .footer {
+	background-color: $white-background-color;
+
 	&__container,
 	&__catalog-wrapper,
 	&__contacts-container {
@@ -41,7 +43,7 @@
 	}
 
 	&__logo-wrapper {
-		margin-top: 1%;
+		margin-top: 3%;
 	}
 
 	&__logo-wrapper,
@@ -59,6 +61,12 @@
 
 	.catalog-block {
 		position: relative;
+	}
+
+	.catalog-block:hover .image {
+		opacity: 0.65;
+		transform: scale(1.05);
+		cursor: pointer;
 	}
 
 	&__contacts-title {
@@ -83,6 +91,10 @@
 		img {
 			width: 100%;
 		}
+	}
+
+	&__logo-container {
+		margin-left: -20px;
 	}
 
 	/* Стили для телефона и эл.почты, которые можно применить на странице Контакты */
@@ -139,45 +151,6 @@
 		a svg:active #whatsapp {
 			fill: $contacts-icons-active-click-color;
 		}
-	}
-
-	/* Стили для логотипа, которые можно сделать общими и для хедера */
-	.logo-title {
-		font: {
-			family: $logo-big-text-font-family;
-			size: $small-title-h3;
-			weight: $bold;
-		}
-		color: $logo-upper-text-color;
-	}
-
-	.logo-subtitle {
-		font: {
-			family: $logo-small-text-font-family;
-			size: $extra-mini-text;
-		}
-		color: $logo-lower-text-color;
-	}
-
-	.logo-container,
-	.logo-box,
-	.logo-titles-box {
-		display: flex;
-	}
-	.logo-titles-box {
-		flex-direction: column;
-	}
-
-	.logo-container {
-		align-items: center;
-	}
-
-	.logo-img {
-		width: 100%;
-	}
-
-	&__logo-container {
-		margin-left: -20px;
 	}
 
 	/* Стили, которые возможно удалим, когда в бургер-меню появится кнопка Контакты */

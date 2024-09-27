@@ -1,0 +1,10 @@
+@import "/fonts";
+@import "/vars";
+@import "/src/common/common";
+@import "/mixins";
+@import "/templates";
+@import "/src/common/firstScreen";
+
+.basket-page__inner-wrapper_position {
+	margin: 40% 0 20% 0;
+}
