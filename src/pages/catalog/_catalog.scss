@@ -1,0 +1,44 @@
+.catalog-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+  margin: 0 30px;
+}
+.catalog-filters {
+  width: 30%;
+}
+.filters-wrapper {
+}
+.catalog-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+.catalog-card {
+  //   width: 200px;
+}
+
+.catalog-image-and-name {
+}
+.catalog-image {
+  width: 90%;
+  //   z-index: 99;
+}
+
+.catalog-name {
+}
+.catalog-price-and-backet {
+}
+.catalog-price {
+}
+.add-backet {
+}
+
+@media screen and (max-width: 600px) {
+  .catalog-container {
+    flex-direction: column;
+  }
+}
