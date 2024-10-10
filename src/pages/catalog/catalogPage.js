@@ -5,7 +5,6 @@ import { renderMainContainer } from "../../common/common";
 import { renderFirstScreen } from "../../common/firstScreen";
 import { renderFooter } from "../../common/footer";
 import { renderCatalogContainer } from "./renderCatalogContainer";
-import { renderCatalogWrapper } from "./catalogWrapper";
 
 export function renderCatalog(element) {
   element.innerHTML = "";
@@ -16,6 +15,5 @@ export function renderCatalog(element) {
   const innerWrapper = document.querySelector(".first-screen__inner-wraper");
   innerWrapper.innerHTML = `<h2 class="secondary-main-title">Каталог</h2>`;
   renderCatalogContainer(mainContainer);
-  renderCatalogWrapper(mainContainer);
   renderFooter();
 }
