@@ -17,16 +17,24 @@ body {
 	font-style: normal;
 	color: $black-text-color;
 	background-color: $main-background-color;
+	height: 100vh;
 }
 
 /* Стили для главного div app */
 .app__wrapper {
-	width: 100%;
-	min-height: 100%;
-	// overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+
+// Стили для main, но возможно они повлияют на остальных, не знаю ещё
+.main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	height: 100%;
 }
 
 /* Стили для ограничивающего контейнера */
@@ -159,6 +167,7 @@ ul {
 }
 
 // Стиль для цифры для добавления количества единиц товара - 1 + на странице "Карточка товара"
+// Lato, regular, 24px
 .add-item_number-text {
 	font: {
 		family: $lato-font-family;

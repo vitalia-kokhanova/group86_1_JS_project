@@ -9,16 +9,73 @@
 
 	&__container {
 		@extend %flex-column !optional;
+		z-index: 2;
 	}
 
 	&__title {
 		margin-bottom: 3%;
 	}
 
-	&__inner-wrapper {
-		@extend %flex-justify-between !optional;
+	// Стили для слайдера Скидки
+
+	&__slider-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		overflow-x: hidden;
 	}
 
+	&__slider-track {
+		display: flex;
+		flex-wrap: nowrap;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		width: 100%;
+	}
+
+	&__slider-box {
+		display: flex;
+		justify-content: space-between;
+		min-width: 100%;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out 0.5s;
+		padding: 10px 5px;
+	}
+
+	.current-slide {
+		opacity: 1;
+	}
+
+	.slide-in {
+		transform: translateX(0); /* Начальное положение для анимации */
+	}
+
+	&__slide {
+		flex: 0 0 auto;
+		scroll-snap-align: start;
+	}
+
+	&__slider-dots {
+		display: flex;
+		justify-content: center;
+		margin: 3% 0 1% 0;
+
+		.slider-dot {
+			width: 42px;
+			height: 10px;
+			border-radius: 5px;
+			background-color: $slider-dash-off-color;
+			margin: 0 10px;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+
+		.slider-dot.active {
+			background-color: $slider-dash-on-color;
+		}
+	}
+
+	// Стили для карточки товара в разделе Скидки
 	&__image-wrapper {
 		margin-bottom: 4%;
 	}
@@ -27,15 +84,20 @@
 		margin-bottom: 5%;
 	}
 
-	// Это можно перенести в common
+	// Это можно перенести в common - это общие стили для одной карточки товара
 	.card-box-small {
 		@extend %flex-column !optional;
-		max-width: 284px;
-		max-height: 427px;
+		width: 280px;
+		max-height: 420px;
 		padding: 10px 10px 36px 10px;
 		border-radius: 0 20px 20px 20px;
 		background-color: $card-bg-color;
-		z-index: 2;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 1px 1px 5px rgb(200, 199, 199);
+			transform: scale(1.009);
+		}
 
 		&__image-wrapper {
 			display: flex;
@@ -93,12 +155,7 @@
 		}
 	}
 
-	// Это убрать, когда всё доделаем
-	.test-button-Vika {
-		margin-bottom: 30px;
-	}
-
-	// Это можно перенести в common
+	// Это можно перенести в common возможно - общие стили для первых блоков с лепестками
 	.petals-wrapper {
 		position: absolute;
 		@include zero-position;

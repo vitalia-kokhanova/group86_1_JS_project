@@ -52,7 +52,7 @@ export function renderHeader() {
 									</svg>
 								</a>
 							</li>
-							<li class="header__nav-list-item">
+							<li class="header__nav-list-item nav-list-item_basket">
 								<a
 									href="/basket"
 									class="list-item-link basket-icon-link"

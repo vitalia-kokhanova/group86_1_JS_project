@@ -1,9 +1,6 @@
 import "./_auth.scss";
 import { initializeApp } from "firebase/app";
-import {
-	getAuth,
-	createUserWithEmailAndPassword
-} from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export const firebaseConfig = {
 	apiKey: "AIzaSyBv33wcqlvshLdxukPHWCTXgvA2HBIhHzY",
@@ -17,10 +14,6 @@ export const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
-
-
-
 
 export function registrPage(element) {
 	element.innerHTML = `
@@ -71,14 +64,13 @@ export function registrPage(element) {
 		</div>
     `;
 	const formReg = document.forms.Reg;
-  const err = document.querySelector(".error");
-  const { email, password, names} = formReg;
- 
+	const err = document.querySelector(".error");
+	const { email, password, names } = formReg;
 
-  formReg.addEventListener("submit", (e) => {
-    e.preventDefault()
-	
-	createUserWithEmailAndPassword(auth, email.value, password.value)
+	formReg.addEventListener("submit", (e) => {
+		e.preventDefault();
+
+		createUserWithEmailAndPassword(auth, email.value, password.value)
 			.then((userCredential) => {
 				window.location.href = "/profile";
 				console.log(userCredential);
@@ -87,6 +79,5 @@ export function registrPage(element) {
 				err.innerHTML = "Пользователь с таким email уже существует";
 				err.classList.remove("none");
 			});
-})
-
+	});
 }
