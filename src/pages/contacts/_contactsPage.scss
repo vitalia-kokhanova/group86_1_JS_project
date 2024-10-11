@@ -3,7 +3,7 @@
 @import "/src/common/common";
 @import "/mixins";
 @import "/templates";
-@import "/src/common/common";
+@import "/src/common/firstScreen";
 
 // Специальные классы для блока "First Screen", которые должны отработать для этого же блока, но на странице "Контакты" (а не на Главной) (см. contactsPage.js)
 .contacts-page__inner-wrapper_position {

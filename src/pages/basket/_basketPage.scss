@@ -5,6 +5,11 @@
 @import "/templates";
 @import "/src/common/firstScreen";
 
+// Специальные классы для блока "First Screen", которые должны отработать для этого же блока, но на странице "Корзина".
 .basket-page__inner-wrapper_position {
-	margin: 40% 0 20% 0;
+	margin: 35% 0 1% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 350px;
 }

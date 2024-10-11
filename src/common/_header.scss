@@ -107,25 +107,24 @@
 
 	&__nav-list-item {
 		a svg:hover #searchIconPath,
-		a svg:hover #profileIconPath,
-		a svg:hover #roundIconPath,
-		a svg:hover #cartIconPath {
+		a svg:hover #profileIconPath {
 			fill: $nav-icons-hover-color;
 		}
 
 		a svg:active #searchIconPath,
-		a svg:active #profileIconPath,
-		a svg:active #roundIconPath,
-		a svg:active #cartIconPath {
+		a svg:active #profileIconPath {
 			fill: $nav-icons-active-click-color;
 		}
 	}
 
-	.basket-icon-wrapper:hover {
-		a svg:hover #roundIconPath,
-		a svg:hover #cartIconPath {
-			fill: $nav-icons-hover-color;
-		}
+	.nav-list-item_basket:hover #roundIconPath,
+	.nav-list-item_basket:hover #cartIconPath {
+		fill: $nav-icons-hover-color;
+	}
+
+	.nav-list-item_basket:active #roundIconPath,
+	.nav-list-item_basket:active #cartIconPath {
+		fill: $nav-icons-active-click-color;
 	}
 }
 

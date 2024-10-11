@@ -20,7 +20,7 @@ export function renderFirstScreen(element) {
 					</h1>
 					<a href="/catalog" class="choose-flowers-btn">
 					<button
-						type="submit"
+						type="button"
 						id="chooseFlowersBtn"
 						class="pink-button big-pink-button"
 					>

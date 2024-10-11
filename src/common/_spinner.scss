@@ -1,0 +1,58 @@
+@import "/fonts";
+@import "/vars";
+@import "./common";
+@import "/templates";
+@import "/mixins";
+
+.spinner {
+	display: flex;
+	position: relative;
+	z-index: -1;
+	height: 100%;
+	margin-bottom: 0;
+	background-color: $white-background-color;
+	flex-grow: 1;
+
+	&__bg-wrapper {
+		height: 100%;
+	}
+
+	&__bg-toning {
+		display: flex;
+		@include w-100-h-100;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		background-color: $blackened-bg-toning;
+	}
+
+	&__wrapper {
+		display: flex;
+		z-index: 2;
+		@include w-100-h-100;
+		padding-top: 20%;
+
+		color: $slider-dash-off-color;
+		font-size: $big-title-h1;
+		font-weight: 800;
+
+		span {
+			display: inline-block;
+			animation: spinner__wrapper 1.5s infinite alternate;
+			@for $i from 0 through 8 {
+				&:nth-child(#{$i + 1}) {
+					animation-delay: #{$i * 0.1}s;
+				}
+			}
+		}
+	}
+}
+
+@keyframes spinner__wrapper {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

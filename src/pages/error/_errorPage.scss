@@ -1,0 +1,53 @@
+@import "/fonts";
+@import "/vars";
+@import "/src/common/common";
+@import "/mixins";
+@import "/templates";
+
+.error-page {
+	display: flex;
+	position: relative;
+	z-index: -1;
+	height: 100%;
+	margin-bottom: 0;
+	background-color: $white-background-color;
+
+	&__bg-wrapper {
+		height: 100%;
+	}
+
+	&__bg-toning {
+		display: flex;
+		@include w-100-h-100;
+		position: absolute;
+		z-index: 1;
+		background-color: $blackened-bg-toning;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		z-index: 2;
+		@include w-100-h-100;
+		padding-top: 20%;
+
+		color: $slider-dash-off-color;
+		font-size: $middle-title-h2;
+		font-weight: 800;
+
+		p {
+			width: 60%;
+		}
+	}
+
+	&__text1 {
+		margin-bottom: 2%;
+	}
+
+	&__button {
+		width: 380px;
+		height: 50px;
+		margin: 3% 0;
+		font-size: $mini-title-h4;
+	}
+}

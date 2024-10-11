@@ -1,0 +1,141 @@
+@import "/fonts";
+@import "/vars";
+@import "/src/common/common";
+@import "/mixins";
+@import "/templates";
+@import "/src/common/firstScreen";
+
+// Специальные классы для блока "First Screen", которые должны отработать для этого же блока, но на странице "Карточка товара" (а не на Главной), и причём для каждой карточки свой заголовок.
+
+.specific-card__inner-wrapper_position {
+	margin: 35% 0 1% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 350px;
+}
+
+.specific-card__main-title {
+	width: 68%;
+}
+
+// Стили для самого блока с данными о конкретном товаре (section class="specific-card")
+.specific-card {
+	&__container,
+	&__feedback-container,
+	&__data-wrapper,
+	&__info-wrapper,
+	&__occasion-box,
+	&__compound-box,
+	&__prices-wrapper,
+	&__description-wrapper,
+	&__feedback-box {
+		@extend %flex-column !optional;
+	}
+
+	&__container,
+	&__data-container,
+	&__feedback-container {
+		width: 100%;
+	}
+
+	&__data-container,
+	&__image-wrapper,
+	&__buttons-wrapper,
+	&__quantity-wrapper,
+	&__quantity-box {
+		display: flex;
+	}
+
+	&__image-wrapper {
+		position: relative;
+		width: 40%;
+		padding-top: 40%;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include object-fit;
+		}
+	}
+
+	&__data-wrapper {
+		width: 60%;
+	}
+
+	&__badges-box {
+		display: grid;
+		width: 50%;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	&__hit-badge {
+		grid-row: 1/2;
+		grid-column: 1/2;
+	}
+
+	&__sale-badge {
+		grid-row: 1/2;
+		grid-column: 2/3;
+	}
+
+	&__new-badge {
+		grid-row: 2/3;
+		grid-column: 1/2;
+	}
+
+	&__today-bouquet {
+		grid-row: 2/3;
+		grid-column: 2/3;
+	}
+
+	&__badges-box-feedback {
+		grid-row: 3/4;
+		grid-column: 1/2;
+	}
+
+	&__badges-box-availability {
+		grid-row: 3/4;
+		grid-column: 2/3;
+	}
+
+	&__buttons-wrapper,
+	&__prices-wrapper {
+		justify-content: space-between;
+	}
+
+	&__buttons-wrapper,
+	&__quantity-wrapper,
+	&__quantity-box {
+		align-items: center;
+	}
+
+	&__quantity-box {
+		justify-content: space-around;
+		min-width: 140px;
+		min-height: 66px;
+		background-color: $form-input-fields-back-color;
+		border-radius: 39px;
+
+		&-btn {
+			background-color: #ffffff00;
+			border: none;
+			cursor: pointer;
+		}
+	}
+
+	&__prices-wrapper {
+		min-height: 66px;
+	}
+
+	.disabled-subtract-btn {
+		cursor: default;
+	}
+
+	.disabled-basket-btn {
+		opacity: 0.5;
+		cursor: default;
+	}
+}
