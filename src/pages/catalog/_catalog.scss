@@ -1,0 +1,155 @@
+.catalog-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+  margin: 0 30px;
+}
+.catalog-filters {
+  width: 30%;
+}
+
+.filter-h3 {
+  text-align: center;
+  cursor: pointer;
+}
+
+.filters-wrapper {
+  display: none;
+}
+
+.filter__item {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 20px 0px;
+  border-bottom: solid 1px gray;
+}
+
+.filter__item_subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.filter__item_spoiler {
+  position: relative;
+}
+
+.filter__item_spoiler,
+.filter__item_spoiler::before {
+  height: 2px;
+  width: 16px;
+  border-radius: 40px;
+  background: pink;
+}
+
+.filter__item_spoiler::before {
+  content: "";
+  right: 0;
+  position: absolute;
+  transform: rotate(90deg);
+  transition: all 0.3s ease 0s;
+}
+
+.filter__item_spoiler._minus::before {
+  transform: rotate(0deg);
+}
+
+.filter__item_content {
+  margin: 20px 0px 0px;
+  display: none;
+}
+
+.filter__item._visible .filter__item_content {
+  display: flex;
+}
+
+.sidebar__reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0px 0px 20px;
+  color: #d7537a;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidebar__reset i {
+  color: #dd9eab;
+  transition: color 0.3s;
+}
+
+.sidebar__reset:hover i {
+  color: #fb7e98;
+  transition: color 0.3s;
+}
+
+.catalog-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.catalog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+.catalog-card {
+  //   width: 200px;
+}
+
+.catalog-image-and-name {
+}
+.catalog-image {
+  width: 90%;
+  height: 100%;
+}
+
+.catalog-name {
+}
+.catalog-price-and-backet {
+}
+.catalog-price {
+}
+.add-backet {
+}
+
+@media screen and (max-width: 600px) {
+  .catalog-container {
+    flex-direction: column;
+  }
+  .catalog-filters {
+    width: 100%;
+  }
+
+  .catalog-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .catalog-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: auto;
+    // gap: 10px;
+  }
+
+  #four-card,
+  .four-card {
+    display: none;
+  }
+
+  #three-card,
+  .three-card {
+    display: none;
+  }
+}
